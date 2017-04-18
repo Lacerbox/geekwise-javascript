@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fred's Haunted Mansion</title>
+    <link rel="stylesheet" href="styles/fred-mansion.css">
+    <script src="scripts/fred-mansion.js"></script>
+
+    <script type="text/javascript">
+    var userWidth = window.screen.width;
+    function moveLeft() {
+    var pp = document.getElementById("x");
+    var lft = parseInt(pp.style.right);
+    var tim = setTimeout("moveLeft()",30);  // 30 controls the speed
+    lft = lft+5;  // Moves image by 5 pixels
+    pp.style.right = lft+"px";
+    if (lft > userWidth + 10) {  // Right edge of image past the left edge of screen
+      pp.style.right = -1370;    // Back to the right
+      clearTimeout(tim);
+      }
+    }
+    </script>
+
+  </head>
+  <body background="img/room-1.gif" onload="moveLeft()">
+    <h1>Enter Creepy or Scary to decide where you go next.<br>
+    <input id="toJav">
+    <button onclick="creepyOrScary()">'Creepy' or 'Scary'</button></h1>
+    <!--<h1><p id="fromJav"></p></h1>-->
+    <img src="img/fred-left.gif" id="x" style="position:relative;top:274px;right:-1370px;">
+    <embed name="music" src="sounds/foyer-organ.mp3" loop="false" autostart="false" hidden="true" mastersound />
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>To Title Case II</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/assignment.css">
+</head>
+  <body>
+
+    Please Enter Your First, Middle, & Last Name: <input type="text" name="str" id="toJav">
+    <button onclick="namesToTitleCase(document.getElementById('toJav').value)">Click Here</button>
+    <h3 id="fromJav"></h3>
+
+    <script language = "JavaScript">
+    // FUNCTION TO CAPITALIZE THE FIRST LETTER OF EACH WORD IN A STRING
+    function namesToTitleCase(aString) {
+      if (aString != "" && aString != null) { // IF NOTHING IS ENTERED, THE REST OF THE FUNCTION IS SKIPPED
+        var stringToLowerCase = aString.toLowerCase();         // CONVERTS THE STRING TO LOWER CASE
+        var stringToArray = stringToLowerCase.split(' ');      // CONVERTS THE STRING TO AN ARRAY
+
+        for(var i = 0 ; i < stringToArray.length ; i++) {      // LOOPS FOR THE NUMBER OF WORDS IN THE ARRAY USING '.length'
+          var wordsToLetters = stringToArray[i].split('');     // CONVERTS EACH WORD ARRAY INTO AN ARRAY OF LETTERS
+          wordsToLetters[0] = wordsToLetters[0].toUpperCase(); // CONVERTS THE FIRST LETTER OF EACH WORD TO UPPER CASE
+          var lettersBackToWords = wordsToLetters.join('');    // CONVERTS THE ARRAY OF LETTERS BACK INTO A STRING FOR EACH WORD
+          stringToArray[i] = lettersBackToWords;               // COPIES EACH WORD BACK INTO THE ORIGINAL "stringToArray" ON EACH LOOP
+          var arrayBackToString = stringToArray.join(' ');     // CONVERTS THE ARRAY BACK TO A STRING SEPARATING EACH WORD WITH A SPACE
+        }
+        document.getElementById("toJav").value = ''; // TO CLEAR THE BOX AFTER USER INFORMATION IS ENTERED
+        return (document.getElementById("fromJav").innerHTML = stringToArray.join(' ')); // CONVERTS THE ARRAY BACK TO A STRING SEPARATING
+      }                                                            // EACH WORD WITH A SPACE AND RETURNS IT BACK TO 'to-title-case-II.html'
+      document.getElementById("toJav").value = ''; // TO CLEAR THE BOX AFTER USER INFORMATION IS ENTERED
+      document.getElementById("fromJav").innerHTML = 'You\'d better enter something or someone\'s gonna get hurt!';
+    }
+    </script>
+
+  <script src="js/assignment.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+/* UNIVERSALS */
+body {
+  background-color: hsla(185, 95%, 60%, .3)
+}
+
+/*ul li {
+  display: inline-block;
+  width: 500px;            SAME AS BELOW
+  padding: 10px 20px;
+  margin: 20px 40px;
+}*/
+ ul {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   display: flex;
+   justify-content: space-around;
+ }
+
+article img {
+  width: 100%;
+}
+
+article h1 {
+  font-size: 5vw;
+}
+
+article p {
+  font-size: 3vw;
+}
+
+/* FOOTER SECTION */
+#copyright {
+    text-align: center;
+    font-family: "verdana";
+    font-size: 12pt;
+    padding-top: 40px;
+    text-decoration: none;
+}

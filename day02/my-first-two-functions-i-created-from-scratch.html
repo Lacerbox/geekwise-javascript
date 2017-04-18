@@ -1,0 +1,86 @@
+<html>
+<body>
+
+<script language = "JavaScript">
+
+// FUNCTION 1 - TO GET THE FIRST AND LAST NAME IN A STRING, THEN MODIFY THE STRING
+// CAPITALIZING THE FIRST LETTER OF BOTH NAMES AND LOWERCASE ALL REMAINING LETTERS
+// This One Was Actually Easier Than Function 2
+function changeCaseOfName() {
+  var str = 'loUiS cErbO';
+  var newStr = "";
+  for (var i = 0; i < str.length; i++) { // Loops the length of the string entered by the user
+    if (i === 0) {
+      newStr += (str[0].toUpperCase());  // Changes first character of first name to upper case
+      i++;                 // Increments to the second character of the first name
+    }
+    if (str[i] === " ") {  // If character is a 'space', then changes the next character (first letter of the last name) to upper case
+      i++;                 // Increments to the character after the 'space'
+      newStr += (" " + str[i].toUpperCase());
+      i++;                 // Increments to the second character of the last name
+    }
+    newStr += (str[i].toLowerCase());    // Changes rest of characters to lower case
+  }
+  console.log(newStr);
+}
+changeCaseOfName(); // Calls the 'changeCaseOfName' function
+
+//____________________________________________________________________________________________________
+
+
+// FUNCTION 2 - TO GET THE FIRST AND LAST NAME IN A STRING, THEN MODIFY THE STRING
+// CAPITALIZING THE FIRST LETTER OF BOTH NAMES AND LOWERCASE ALL REMAINING LETTERS
+// This One Was Actually Harder Than Function 1
+function changeCaseInName() {
+  var str = 'heRMaN mUNstER';
+  var arr = str.split(" "); // Splits the string into an array of substrings
+  var firstName = "", lastName = "", fullName = "";
+  var first = arr.shift();  // Removes first name and saves it to 'var first'
+  var last = arr.pop();     // Removes last name and saves it to 'var last'
+
+  for (var i = 0; i < first.length; i++) {    // Loops the length of the first name
+    if (i === 0) {
+      firstName += (first[0].toUpperCase());  // Changes first character of first name to upper case
+      i++;
+    }
+    firstName += (first[i].toLowerCase());    // Changes rest of characters of first name to lower case
+  }
+  for (var i = 0; i < last.length; i++) {     // Loops the length of the last name
+    if (i === 0) {
+      lastName += (last[0].toUpperCase());    // Changes first character of last name to upper case
+      i++;
+    }
+    lastName += (last[i].toLowerCase());      // Changes rest of characters of last name to lower case
+  }
+  fullName = firstName.concat(' ', lastName); // Concatenates 'firstName' and 'lastName' to 'fullName'
+  console.log(fullName);
+}
+changeCaseInName(); // Calls the 'changeCaseInName' function
+
+//____________________________________________________________________________________________________
+
+
+// FUNCTION 3 - TO GET THE FIRST AND LAST NAME IN A STRING, THEN MODIFY THE STRING
+// CAPITALIZING THE FIRST LETTER OF BOTH NAMES AND LOWERCASE ALL REMAINING LETTERS
+// This One Was Not That Hard As It Was Based On Function 2 But Uses No Loops Or If's
+function changeCaseForName() {
+  var str = 'fReD fLinTStOnE';
+  var newStr = str.toLowerCase(); // CONVERTS THE STRING TO LOWER CASE
+  var arr = newStr.split(" "); // Splits the string into an array of substrings
+  var firstName = "", lastName = "", fullName = "", frst = "", lst = "";
+  var first = arr.shift();  // Removes first name and saves it to 'var first'
+  var last = arr.pop();     // Removes last name and saves it to 'var last'
+
+  frst += (first[0].toUpperCase());  // Changes first character of first name to upper case
+  var firstN = first.replace(first.charAt(0), frst[0]); //Replaces first character in the string
+  lst += (last[0].toUpperCase());    // Changes first character of last name to upper case
+  var lastN = last.replace(last.charAt(0), lst[0]);     //Replaces first character in the string
+  fullName = firstN.concat(' ', lastN); // Concatenates 'firstName' and 'lastName' to 'fullName'
+  console.log(fullName);
+}
+changeCaseForName(); // Calls the 'changeCaseInName' function
+
+</script>
+
+</body>
+</html>

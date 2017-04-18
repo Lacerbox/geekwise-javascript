@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>To Title Case</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/assignment.css">
+</head>
+  <body>
+
+    Please Enter Your First, Middle, & Last Name: <input type="text" name="str" id="toJav">
+    <button onclick="toTitleCase(document.getElementById('toJav').value)">Click Here</button>
+    <h3 id="fromJav"></h3>
+
+    <script language = "JavaScript">
+    // FUNCTION TO CAPITALIZE THE FIRST LETTER OF EACH WORD IN A STRING
+    function toTitleCase(str) {
+      if (str != "" && str != null) { // If nothing is entered, the rest of the function is skipped
+        words = str.toLowerCase().split(' ');     // Converts the string to lower case and splits it into an array of substrings
+
+        for(var i = 0; i < words.length; i++) {   // Loops the number of words in the array using str.length
+          var letters = words[i].split('');       // Loops throuch each word and splits it into an array of letters
+          letters[0] = letters[0].toUpperCase();  // Converts the first letter of each word to uppercase
+          words[i] = letters.join('');            // Converts the array of letters back into a string of words
+        }
+        document.getElementById("toJav").value = ''; // TO CLEAR BOX AFTER USER INFORMATION IS ENTERED
+        return (document.getElementById("fromJav").innerHTML = words.join(' ')); // Converts the array of words back into a string of words
+      }                                                                   // separated by spaces and returns it back to 'to-title-case.html'
+      document.getElementById("toJav").value = ''; // TO CLEAR BOX AFTER USER INFORMATION IS ENTERED
+      document.getElementById("fromJav").innerHTML = 'You\'d better enter something or someone\'s gonna get hurt!';
+    }
+    </script>
+
+  <script src="js/assignment.js"></script>
+  </body>
+</html>

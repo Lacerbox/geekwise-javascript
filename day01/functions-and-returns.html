@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+		<meta name="description" content="italian restaurant">
+		<meta name="keywords" content="luigis, italian, food, dinners, sandwiches">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Functions & Returns</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>-->
+
+    <style type="text/css">
+      li {
+        list-style-type: none; /* gets rid of bullets on list items */
+      }
+    </style>
+
+  </head>
+  <body>
+
+    Enter Names To Be Converted To An Array: <input type="text" name="names" id="toJav">
+    <button onclick="stringToArray(document.getElementById('toJav').value)">Print Names To Unordered List</button>
+
+    <div class="row"> <!-- NEEDS TO ADD UP TO 12 -->
+      <div class="col-md-5"> <!-- 5 HERE PUTS 'UNORDERED LIST' IN CENTER -->
+      </div>
+      <div class="col-md-2"> <!-- 2 HERE PUTS 'UNORDERED LIST' IN CENTER -->
+        <br><h4>UNORDERED LIST</h4><br>
+        <table id="fromJav"></table>
+      </div>
+      <div class="col-md-5"> <!-- 5 HERE PUTS 'UNORDERED LIST' IN CENTER -->
+      </div>
+    </div>
+
+    <script language = "JavaScript">
+      function stringToArray(names) {
+        var info = document.getElementById("toJav").value; // GETS INFORMATION FROM HTML
+        var arr = info.split(" "); // SPLITS USER ENTERED STRING INTO AN ARRAY OF SUBSTRINGS
+        text = "<ul>";
+        for (var i = 0; i < arr.length; i++) { // ADDS ALL ENTERED NAMED LIKE "<ul><li>NAME-1</li><li>NAME-2</li></ul>"
+          var text = text + "<li>" + arr[i] + "</li>";
+          console.log('Loop ' + i + ' = ' + text);
+        }
+        text = text + "</ul>";
+        console.log('This is what is sent back to HTML: ' + text);
+        document.getElementById("fromJav").innerHTML = text; // SENDS "<ul><li>NAME-1</li><li>NAME-2</li></ul>" BACK TO HTML
+        document.getElementById("toJav").value = ''; // TO CLEAR BOX AFTER USER INFORMATION IS ENTERED
+        return console.log(arr, arr.toString()); // PRINTS ARRAY & CONVERTED ARRAY TO STRING TO CONSOLE JUST FOR SHITS & GRINS
+      }
+    </script>
+
+  </body>
+</html>

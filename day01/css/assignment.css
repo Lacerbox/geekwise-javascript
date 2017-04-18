@@ -1,0 +1,100 @@
+/* FOR IMPORTING FONTS */
+@import url('https://fonts.googleapis.com/css?family=Creepster');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+/* UNIVERSALS */
+
+body {
+    font-family: verdana, arial, sans-serif;
+    color: #335752;
+    background-repeat: repeat;
+}
+                            /* FOR TEXT HOVER COLOR CHANGE ON ALL LINKS IN BODY */
+a:link    { color: #335752 }
+a:visited { color: #335752 }
+a:hover   { color: #8BBABA }
+a:active  { color: #54928B }
+
+/*body {
+  overflow: hidden; /* Hides the horizontal (overflow-x) & vertical (overflow-y) scroll bars
+}*/
+
+a {
+  text-decoration: none; /* Gets rid of underline on links */
+}
+
+li {
+    list-style-type: none; /* Gets rid of list item bullets */
+    display: inline;
+}
+
+body {
+  background-color: hsla(185, 95%, 60%, .3)
+}
+
+ul {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   display: flex;
+   justify-content: space-around;
+}
+
+article img {
+  margin-left: 480px;
+  margin-top: 25px;
+  /*width: 30%;*/
+}
+
+article h1 {
+  color: #172724;
+  text-align: center;
+  /*font-size: 14;*/
+  font-weight: normal;
+  font-family: 'Creepster', cursive;
+  /*font-family: 'Bad Script', 'Lobster Two', cursive;*/
+  font-size: 2.5vw;
+}
+
+article p {
+  /*font-size: 11pt;*/
+  font-family: "verdana";
+  color: #335752;
+  font-size: 1.5vw;
+}
+
+.button {
+    /* background-color: #; */
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family:Verdana;
+    font-size: 12px;
+    margin: 4px 2px;
+    transition-duration: 0.2s; /* for 0.2 second transition on color change of button */
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #8bbaba;
+    color: #000000;
+}
+
+.button1:hover {
+    background-color: #335752;
+    color: #ffffff;
+}
+
+/* FOOTER SECTION */
+#copyright {
+    text-align: center;
+    color: #172724;
+    font-family: "verdana";
+    font-size: 12pt;
+    padding-top: 40px;
+    text-decoration: none;
+}

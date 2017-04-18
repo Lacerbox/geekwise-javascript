@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Test2</title>
+
+<body onload="myFunction()">
+<p id="demo"></p>
+<script type="text/javascript">
+
+function myFunction(event) {
+    var x = event.which || event.keyCode;
+    document.getElementById("demo").innerHTML = "The Unicode value is: " + x;
+}
+document.onkeypress = myFunction;
+
+</script>
+
+<img src="img/fred-3.gif" id="x" style="position:relative;top:367px;right:-1160px;"><br>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day Two Assignment</title>
+    <link rel="stylesheet" href="css/assignment.css">
+  </head>
+  <body>
+
+    <!-- FUNCTION ONE (No Idea How It Works) -->
+    <script language = "JavaScript">
+    function toTitleCase(str)
+    {
+      return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    }
+    var newString = toTitleCase("fReD flINTsTonE");
+    //console.log(newStr);
+    alert(newString);
+    </script>
+
+
+    <!-- ***** FUNCTION TWO *****
+    Function that converts the first letter of each word in a string to upper case,
+    and optionally converts the other letters in each word to lower case.
+    A side effect is converting multiple spaces to single space. -->
+    <script language = "JavaScript">
+    // THIS FUNCTION CAN CAPITALIZE MULTIPLE WORDS
+    function toTitleCase(s) {
+    	// Regular expression for a letter, and followed by none or more letters
+      var re1 = /(\w)(\w*)/;
+      // Make an array of words that are in the input string
+      var a1 = s.split(/\s+/g);
+      // Loop through each word
+      for (i = 0; i < a1.length; i++ ) {
+        // Split word into first letter followed by the rest of word
+        var a2 = a1[i].match(re1);
+        // Capitalize first character of word
+        a1[i] = a2[1].toUpperCase() + a2[2];
+        // Alternatively, also convert rest of word to lower case
+        a1[i] = a2[1].toUpperCase() + a2[2].toLowerCase();
+      }
+      // Return new string built from words in array, separated by spaces
+      return a1.join(" ");
+    }
+    var newStr = toTitleCase("lOUiS ceRbO heRMaN muNStER and fReD flINTstOnE");
+    console.log(newStr);
+    </script>
+
+  </body>
+</html>
