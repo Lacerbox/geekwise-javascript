@@ -9,7 +9,7 @@
     <script src="scripts/fred-mansion.js"></script>
 
     <script type="text/javascript">
-    // FUNCTION TO DELAY SHOWING TEXT FOR 2 SECONDS
+    // FUNCTION TO DELAY SHOWING TEXT FOR 3 SECONDS
     // Hide from browsers without javascript
     window.onload=function() {  // Executes when the page finishes loading
     	setTimeout(func1, 3000);  // Sets a timer which calls function func1 after 3,000 milliseconds = 3 seconds
@@ -20,16 +20,15 @@
     }
     // End hiding
 
-    // FUNCTION TO SWITCH TO 'room-1.html' AFTER 7 SECONDS
+    // FUNCTION TO SWITCH TO 'party-grim.html' AFTER 7 SECONDS
     window.setTimeout(function() {
-        window.location.replace("room-1.html");
+        window.location.replace("party-grim.html");
     }, 7000);
     window.setTimeout();
 
     </script>
   </head>
-  <body>
-  <h2><div id="div-txt" class="hide">Ok, enough of the party. Time to go inside the haunted mansion!</div></h2>
   <body background="img/party.jpg">
+    <div id="div-txt" class="hide">Ok, now lets go to a real party!</div>
   </body>
 </html>

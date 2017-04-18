@@ -74,8 +74,10 @@ h6 {
 .hide {
   display: none;
 }
+
 .show {
-  text-align: center;
+  margin-top: 25px;
+  margin-left: 290px;
   font-weight: normal;
   font-family: 'Creepster', cursive;
   font-size: 2vw;
