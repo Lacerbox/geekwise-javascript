@@ -10,8 +10,8 @@
   </head>
   <body background="img/mansion-outside.jpg">
     <h1>Wanna go inside, or to a party?</h1>
-    <input id="toJav">
-    <button onclick="outside()">'Inside' or 'Party'</button>
+    <input id="toJav" onKeydown="if (event.keyCode===13) outside()">
+    <button class="button button1" onclick="outside()">'Inside' or 'Party'</button>
     <h1><p id="fromJav"></p></h1>
     <embed name="music" src="sounds/mansion-1.mp3" loop="false" autostart="false" hidden="true" mastersound />
   </body>

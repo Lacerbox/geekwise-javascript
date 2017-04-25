@@ -74,7 +74,7 @@ h6 {
 .hide {
   display: none;
 }
-
+        /* To delay showing text in 'party.html' & 'party-grim.html' */
 .show {
   margin-top: 25px;
   margin-left: 290px;
@@ -82,6 +82,30 @@ h6 {
   font-family: 'Creepster', cursive;
   font-size: 2vw;
   color: #3c6761;
+}
+
+.button {
+    /* background-color: #; */
+    border: none;
+    color: white;
+    padding: 2.5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 14px;
+    transition-duration: 0.2s; /* for 0.2 second transition on color change of button */
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #8bbaba;
+    color: #000000;
+}
+
+.button1:hover {
+    background-color: #335752;
+    color: #ffffff;
 }
 
 /* TEXT FADE START */

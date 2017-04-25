@@ -1,0 +1,123 @@
+/* FOR IMPORTING FONTS */
+@import url('https://fonts.googleapis.com/css?family=Creepster');
+
+body {
+    font-family: verdana, arial, sans-serif;
+    color: #54928B;
+    background-repeat: repeat;
+    overflow: hidden; /* Hides both horizontal and vertical scrollbar */
+}
+                            /* FOR TEXT HOVER COLOR CHANGE ON ALL LINKS IN BODY */
+a:link    { color: #54928B }
+a:visited { color: #54928B }
+a:hover   { color: #8BBABA }
+a:active  { color: #335752 }
+
+/* Gets rid of underline on links */
+a {
+  text-decoration: none;
+}
+
+#fred {
+  position: relative; /* FOR 'fred-2.gif' */
+  text-align: center;
+  margin-top: 150px;
+  margin-left: 265px;
+}
+
+h1 {
+  font-weight: normal;
+  font-family: 'Creepster', cursive;
+  font-size: 2vw;
+  color: #97c3be; /*#7db5ae*/
+}
+
+h2 {
+  text-align: center;
+  font-weight: normal;
+  font-family: 'Creepster', cursive;
+  font-size: 2vw;
+  color: #3c6761;
+}
+
+h3 {
+  font-weight: normal;
+  font-family: 'Creepster', cursive;
+  font-size: 2vw;
+  color: #97c3be;
+}
+
+h4 {
+  text-align: center;
+  font-weight: normal;
+  font-family: 'Creepster', cursive;
+  font-size: 3vw;
+  color: #97c3be;
+}
+
+h5 {
+  text-align: center; /* NOT BEING USED */
+  /*font-size: 11pt;
+  font-family: "verdana";
+  color: #800000;*/
+}
+
+h6 {
+  text-align: center; /* FOR 'Close Window' */
+  margin-top: 475px;
+  font-weight: normal;
+  font-family: 'Creepster', cursive;
+  font-size: 2vw;
+  color: #335752;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  margin-top: 25px;
+  margin-left: 290px;
+  font-weight: normal;
+  font-family: 'Creepster', cursive;
+  font-size: 2vw;
+  color: #3c6761;
+}
+
+.button {
+    /* background-color: #; */
+    border: none;
+    color: white;
+    padding: 2.5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 14px;
+    transition-duration: 0.2s; /* for 0.2 second transition on color change of button */
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #8bbaba;
+    color: #000000;
+}
+
+.button1:hover {
+    background-color: #335752;
+    color: #ffffff;
+}
+
+/* TEXT FADE START */
+z {
+    font-weight: normal; /* without this font is bold */
+    font-family: 'Creepster', cursive;
+    font-size: 2vw;
+    animation: change 2s infinite;
+}
+
+@keyframes change {
+    from { color: #98e0eb }
+    to   { color: #335752 }
+}
+/* TEXT FADE END */

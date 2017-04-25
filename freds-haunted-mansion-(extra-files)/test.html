@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Issue</title>
+    <script src="https://fb.me/react-0.13.3.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/jsx">
+      var Form = React.createClass({
+        div: function div() {
+          alert('what tha');
+        },
+
+        submit: function submit() {
+          alert('regular submit');
+        },
+
+        render: function render() {
+          return (
+            <form role="form">
+              <button onClick={this.div}>the stubbed dropdown element</button>
+
+              <input type="text" placeholder="regular" />
+              <button type="submit" onClick={this.submit}>save me</button>
+            </form>
+          );
+        }
+      });
+
+      React.render(
+        <Form />,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fred's Haunted Mansion</title>
+    <link rel="stylesheet" href="styles/fred-mansion.css">
+    <script src="scripts/fred-mansion.js"></script>
+
+    <script type="text/javascript">
+
+    // THIS FUNCTION CHECKS IF THE 'L' OR 'R' KEYS ARE PRESSED
+    function onKeyHit(event) {
+      if (window.event && window.event.keyCode == 108 || window.event && window.event.keyCode == 76) {
+        // FUNCTION TO SWITCH TO 'room-4-l.html' AFTER 400 MILLISECONDS
+        window.setTimeout(function() {
+            window.location.replace("room-4-l.html");
+        }, 400);
+        window.setTimeout();
+      }
+      else if (window.event && window.event.keyCode == 114 || window.event && window.event.keyCode == 82) {
+        // FUNCTION TO SWITCH TO 'room-4-r.html' AFTER 400 MILLISECONDS
+        window.setTimeout(function() {
+            window.location.replace("room-4-r.html");
+        }, 400);
+        window.setTimeout();
+      }
+      else {
+        document.getElementById("fromJav").innerHTML = 'You pressed the wrong key. What are you Chicken?';
+      }
+    }
+    document.onkeypress = onKeyHit;
+
+    </script>
+
+  </head>
+  <body background="img/room-4-fred.jpg">
+    <h1>Press the 'L' key to go Left or the 'R' key to go Right</h1>
+    <h1><p id="fromJav"></p></h1>
+    <embed name="music" src="sounds/room-4-organ.mp3" loop="false" autostart="false" hidden="true" mastersound />
+  </body>
+</html>

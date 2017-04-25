@@ -9,9 +9,9 @@
     <script src="scripts/fred-mansion.js"></script>
   </head>
   <body background="img/room-3.jpg">
-    <h1>Enter 'Exit' to find the way out.</h1>
-    <input id="toJav">
-    <button onclick="toExit()">Enter 'Exit'</button>
+    <h1>Enter 'Exit' to get out of here.</h1>
+    <input id="toJav" onKeydown="if (event.keyCode===13) toExit()">
+    <button class="button button1" onclick="toExit()">Enter 'Exit'</button>
     <h1><p id="fromJav"></p></h1>
     <embed name="music" src="sounds/screams.mp3" loop="false" autostart="false" hidden="true" mastersound />
   </body>

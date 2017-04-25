@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Issue</title>
+    <script src="scripts/jquery.min.js"></script>
+  </head>
+  <body>
+    <p><label>input: <input type="text" name="foo" id="input" value="" /></label></p>
+
+    <p>
+        <button class="keypress" data-code="13">Trigger keypress Enter</button>
+    </p>
+
+    <!--<div id="console"></div>-->
+    <script type="text/javascript">
+
+    /*console.d = function(log){
+        $('#console').text(log);
+    }*/
+
+    var callback = function(e){
+        //console.log(e.type, e);
+        var text = e.type;
+        var code = e.which ? e.which : e.keyCode;
+        if(13 === code){
+            console.log('Enter Was Pressed');
+        } else {
+            console.log('Something Other Than Enter Was Pressed');
+        }
+        //console.d(text);
+    };
+
+    $('#input').keypress(callback);
+
+    /*$('.keypress').click(function(e){
+        var code = $(this).data('code');
+        $('#input').trigger(
+            jQuery.Event( 'keypress', { keyCode: code, which: code } )
+        );
+    });*/
+
+    </script>
+  </body>
+</html>

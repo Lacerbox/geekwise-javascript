@@ -11,8 +11,8 @@
   <body bgcolor="#000000">
     <img id="image" src="img/fred-1.gif" align="right"><br>
     <h1>Do You Want To Go To A Haunted Mansion?</h1>
-    <input id="toJav">
-    <button onclick="start()">'Yes' or 'No'</button>
+    <input id="toJav" onKeydown="if (event.keyCode===13) start()">
+    <button class="button button1" onclick="start()">'Yes' or 'No'</button>
     <h1><p id="fromJav"></p></h1>
   </body>
 </html>

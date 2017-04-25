@@ -13,7 +13,7 @@
     function moveRight() {
     var pp = document.getElementById("x");
     var lft = parseInt(pp.style.left);
-    var tim = setTimeout("moveRight()",30);  // 40 controls the speed
+    var tim = setTimeout("moveRight()",30);  // 30 controls the speed
     lft = lft+5;  // Moves image by 5 pixels
     pp.style.left = lft+"px";
     if (lft > userWidth + 10) {  // Left edge of image past the right edge of screen

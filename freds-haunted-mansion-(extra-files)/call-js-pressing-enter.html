@@ -1,0 +1,22 @@
+<html>
+
+<script>
+function search(value)
+
+{
+
+if(value=="enter")
+alert("You hit the enter key");
+else
+alert("You pressed the button");
+
+}
+</script>
+
+
+<input type="text" onKeydown="Javascript: if (event.keyCode==13) search('enter');">
+
+<input type="button" value="Search" onClick="javascript:search('button');">
+
+
+</html>

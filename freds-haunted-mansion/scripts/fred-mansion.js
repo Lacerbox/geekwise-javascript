@@ -95,7 +95,7 @@ function toExit() {
   if (chk.toUpperCase() === exit.toUpperCase()) {
     document.getElementById("toJav").value = ''; // To clear the box after user information is entered
     window.setTimeout(function() {
-        window.location.replace("hall.html");
+        window.location.replace("room-4.html");
     }, 500);
     window.setTimeout();
   }
@@ -104,6 +104,28 @@ function toExit() {
   }
   else {
     ans = 'You didn\'t enter \'Exit\'! What, do you want to stay here? Try again!';
+    document.getElementById("toJav").value = ''; // To clear the box after user information is entered
+  }
+  document.getElementById("fromJav").innerHTML = ans;
+}
+
+
+// FUNCTION FOR 'pirates' PAGE
+function toExitAgain() {
+  chk = document.getElementById("toJav").value;
+
+  if (chk.toUpperCase() === exit.toUpperCase()) {
+    document.getElementById("toJav").value = ''; // To clear the box after user information is entered
+    window.setTimeout(function() {
+        window.location.replace("hall.html");
+    }, 500);
+    window.setTimeout();
+  }
+  else if (chk == '') {
+    ans = 'Again, if you don\'t enter something, you\'ll never get out of here!';
+  }
+  else {
+    ans = 'You didn\'t enter \'Exit\'! I guess you like it here? Try again if you want to leave.';
     document.getElementById("toJav").value = ''; // To clear the box after user information is entered
   }
   document.getElementById("fromJav").innerHTML = ans;
