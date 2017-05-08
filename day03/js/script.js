@@ -82,7 +82,7 @@ numbers.sort(function(a, b) {
 })
 console.log(numbers);
 
-________________________________
+//________________________________
 
 var points = [4, 2, 5, 1, 3];
 points.sort(function(a, b){
@@ -103,7 +103,7 @@ points.sort(function(a, b){
 if anyone is interested in what is happening with the .sort() method, here is one article:
 http://support.ecisolutions.com/doc-ddms/help/reportsmenu/ascii_sort_order_chart.htm */
 
-________________________________
+//________________________________
 
 // Assignment
 

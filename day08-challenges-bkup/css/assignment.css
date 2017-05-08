@@ -1,0 +1,144 @@
+body {
+    font-family: sans-serif;
+    font-weight: 100;
+    margin: 64px 8vw;
+}
+h1:not(:first-child) {
+    margin-top: 100px;
+}
+h1 {
+    margin-bottom: 0;
+}
+h1 + p {
+    margin: 8px 0 32px 0;
+}
+/* Calculate */
+#calc > div:first-child {
+    display: flex;
+    justify-content: center;
+    margin: 0 25vw;
+    padding: 16px;
+    background-color: hsl(100, 80%, 90%);
+}
+#calc > div:first-child div {
+    display: flex;
+    flex-direction: column;
+}
+#calc input[type="text"]{
+    width: 100%;
+    font-size: 5em;
+    box-sizing: border-box;
+    text-align: center;
+    border: none;
+    padding: 8px;
+}
+#calc > div:first-child div:first-child {margin-right: 8px;}
+#calc > div:first-child div:last-child {margin-left: 8px;}
+#calc > div:last-child {
+    display: flex;
+    justify-content: center;
+}
+#calc input[type="submit"]{
+    background-color: hsl(200, 60%, 80%);
+    border: none;
+    border-radius: 2px;
+    padding: 8px 16px;
+    font-weight: 600;
+    margin: 8px 8px 0;
+}
+
+/* Time to Christmas */
+#xmas {
+    display: flex;
+}
+#xmas div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 4px;
+}
+#xmas input[type="text"]{
+    width: 100%;
+    flex-basis: 1;
+    font-size: 3.5em;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 8px;
+    color: black;
+}
+#xmas input:disabled {
+    background-color: hsl(0, 0%, 100%);
+    cursor: not-allowed;
+}
+
+/* Celcius/Fahrenheit  */
+#temp {
+    width: 100%;
+}
+#temp > div:first-child {
+    display: flex;
+}
+#temp > div:last-child {
+    width: 50%;
+    padding-right: 1.5px;
+    display: flex;
+    justify-content: flex-end;
+}
+#temp input[type="text"] {
+    flex: 1;
+    font-size: 5em;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 8px;
+    border: none;
+    margin-top: 8px;
+}
+#temp input:disabled {
+    background-color: hsl(0, 0%, 100%);
+    cursor: not-allowed;
+}
+#temp fieldset {
+    padding: 16px 0 0 16px;
+    margin: 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#temp fieldset input {
+    margin-top: 0;
+}
+#temp fieldset span {
+    display: flex;
+    margin-top: 8px;
+    align-items: center;
+}
+#temp .convert {
+    flex: 1;
+    display: flex;
+    border-right: 1.5px solid hsl(0, 0%, 47%);
+    background-color: hsl(100, 80%, 90%);
+    padding: 16px;
+}
+#temp .converted {
+    flex: 1;
+    border-left: 1.5px solid hsl(0, 0%, 47%);
+    background-color: hsl(0, 80%, 90%);
+    padding: 16px;
+}
+#temp input[type="submit"]{
+    background-color: hsl(200, 60%, 80%);
+    border: none;
+    border-radius: 2px;
+    padding: 8px 16px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+#calc input[type="submit"]:hover,
+#temp input[type="submit"]:hover {
+    background-color: hsl(200, 60%, 70%);
+    color: white;
+    cursor: pointer;
+}

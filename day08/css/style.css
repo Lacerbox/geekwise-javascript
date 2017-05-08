@@ -1,0 +1,56 @@
+/* FOR IMPORTING FONTS */
+@import url('https://fonts.googleapis.com/css?family=Creepster');
+
+/* UNIVERSALS */
+body {
+  background-color: hsla(185, 95%, 60%, .3)
+}
+
+#image {
+  height: 500px;
+  width: 500px;
+  margin-top: 14px;
+}
+
+h1 {
+  color: #172724;
+  text-align: center;
+  font-weight: normal;
+  font-family: verdana;
+  /*font-family: 'Creepster', cursive;*/
+  font-size: 2.2vw;
+}
+
+.button {
+    /* background-color: #; */
+    border: none;
+    color: white;
+    padding: 9px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Creepster', cursive;
+    font-size: 24px;
+    margin: 4px 2px;
+    transition-duration: 0.2s; /* for 0.2 second transition on color change of button */
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #8bbaba;
+    color: #000000;
+}
+
+.button1:hover {
+    background-color: #335752;
+    color: #ffffff;
+}
+
+/* FOOTER SECTION */
+#copyright {
+    text-align: center;
+    font-family: "verdana";
+    font-size: 12pt;
+    padding-top: 40px;
+    text-decoration: none;
+}

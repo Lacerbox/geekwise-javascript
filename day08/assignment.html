@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/assignment.css">
+</head>
+<body>
+
+    <!-- Calculate -->
+    <h1>Do a Calculation</h1>
+    <p>Calculate values and output to alert box on submit</p>
+    <form id="calc">
+        <div>
+            <div>
+                <label for="temp">Value1:</label>
+                <input type="text" name="val1" placeholder="0">
+            </div>
+            <div>
+                <label for="temp">Value2:</label>
+                <input type="text" name="val2" placeholder="0">
+            </div>
+        </div>
+        <div id="calcVals">
+            <input type="submit" name="+" value="Add">
+            <input type="submit" name="-" value="Subtract">
+            <input type="submit" name="*" value="Multiply">
+            <input type="submit" name="/" value="Divide">
+        </div>
+    </form>
+
+    <!-- Days until Christmas -->
+    <h1>Days until Christmas</h1>
+    <p>When page loads, populate input boxes with correct days remaining</p>
+    <div id="xmas">
+        <input type="text" name="days" placeholder="0" disabled>
+    </div>
+
+    <!-- Celcius/Fahrenheit -->
+    <h1>Convert a Temp</h1>
+    <p>Convert entered data to opposite of selected temperature</p>
+    <form id="temp">
+        <div>
+            <div class="convert">
+                <div>
+                    <label for="temp">Convert:</label>
+                    <input type="text" id="temp">
+                </div>
+                <fieldset>
+                    <span>
+                        <input type="radio" name="temp" value="C" id="celsius">
+                        <label for="celsius">C</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="temp" value="F" id="fahrenheit" checked>
+                        <label for="fahrenheit">F</label>
+                    </span>
+                </fieldset>
+            </div>
+            <div class="converted">
+                <label for="temp">Converted:</label>
+                <input type="text" id="temp" disabled>
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Do It!">
+        </div>
+    </form>
+
+    <script src="js/assignment.js"></script>
+</body>
+</html>

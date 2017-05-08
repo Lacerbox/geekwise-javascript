@@ -60,3 +60,16 @@ ________________________________________________________________________________
 Assignment Day 7 - Recreate the following webpage:
 
 http://keycode.info/
+
+_____________________________________________________________________________________
+
+
+In Slack - click ... then click view raw
+
+
+Assignment Day 8
+
+
+Don’t forget… utilize your resources: https://javascript30.com/ It’s free! It’s JavaScripty!
+
+Build 30 things with vanilla JS in 30 days with 30 tutorials

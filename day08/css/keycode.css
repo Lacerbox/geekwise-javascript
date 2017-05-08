@@ -1,0 +1,23 @@
+body {
+  background-color: hsla(185, 95%, 60%, .3)
+}
+
+.hidden {
+  display: none;
+}
+
+p {
+  margin-top: 50px;
+  font-family: verdana;
+  font-weight: normal;
+  font-size: 16;
+  text-align: center;
+ }
+
+h1 {
+  margin-top: 150px;
+  font-family: verdana;
+  font-weight: normal;
+  font-size: 18;
+  text-align: center;
+}

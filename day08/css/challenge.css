@@ -1,0 +1,10 @@
+body {
+  align-items: center;
+}
+div {
+  width: 50%;
+}
+
+div img {
+  width: 100%;
+}

@@ -30,7 +30,7 @@ while(i < 10);
 
 // 'forEach' loops arrays
 var jeeps = ['Wrangler', 'Cherokee', 'Grand Cherokee']
-jeeps.forEach(function(item, index) {
+jeeps.forEach(function(item, index)) {
   console.log(item);
   console.log(index);
 });
@@ -40,7 +40,7 @@ var jeep = {
   make: 'jeep',
   model: '',
   year: 2014,
-  color: 'Black',
+  color: 'Black'.
   doors: 2
 };
 for(property in jeep) {
@@ -64,10 +64,10 @@ else {
 // 'for' loop with 'if, else if, else'
 for(var i = 1 ; i < 10 ; i++) {
   if (i % 2 === 0) {
-    alert("i" + " Is Even");
+    alert("i" + "Is Even");
   }
   else {
-    alert("i" + " Is Odd");
+    alert("i" + "Is Odd");
   }
 }
 
@@ -123,3 +123,6 @@ else if (num >= 12) {
 else {
   console.log('bla bla bla');
 }
+
+
+// ***** DAY 5 *****

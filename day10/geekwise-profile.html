@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Geekwise JavaScript Course Registration</title>
+  <link rel="stylesheet" href="css/geekwise-profile.css">
+</head>
+<body>
+
+  <nav>
+    <h2 id="geekwise">Geekwise</h2>
+    <ul id="userProfiles"></ul>
+    <button type="button">
+      <span>+</span>
+      <span>New User</span>
+    </button>
+
+    <form class="hidden">
+      <input type="text" placeholder="first name">
+      <input type="text" placeholder="last name">
+      <input type="text" placeholder="username">
+      <input type="submit" value="Create User">
+    </form>
+
+    <button class="button button1" onclick="clearUsers()">Clear Users</button>
+
+    <header class="hidden">
+      <p id="fromJav"></p>
+      <button class="button button1" onclick="reloadPage()">Close</button>
+    </header>
+
+    <main id="finishReg" class="hidden">
+      <h3><i>Geekwise JavaScript Course Registration</i><br><br>
+      Finish registration and create a password</h3>
+      Re-enter user name:
+      <input type="text" id="userid"><br>
+      Email:
+      <input type="text" id="email"><br>
+      Create password:
+      <input type="password" id="pword"><br>
+
+      <button class="button button1" onclick="submitReg()">Submit Registration</button>
+    </main>
+
+    <footer>
+      <ul>
+          <li>&copy; Geekwise & Luigi's, Inc.</li>
+      </ul>
+    </footer>
+
+  <script src="js/geekwise-profile.js"></script>
+</body>
+</html>

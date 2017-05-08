@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fred's Haunted Mansion</title>
+    <link rel="stylesheet" href="styles/fred-mansion.css">
+    <script src="scripts/fred-mansion.js"></script>
+  </head>
+  <body background="img/door-closed.jpg">
+    <h3>Congratulations, you found the way out! Enter 'Open' to open the door.</h3>
+    <input id="toJav" onKeydown="if (event.keyCode===13) toDoor()">
+    <button class="button button1" onclick="toDoor()">Enter 'Open'</button>
+    <h1><p id="fromJav"></p></h1>
+  </body>
+</html>
