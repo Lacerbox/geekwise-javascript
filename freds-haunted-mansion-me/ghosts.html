@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fred's Haunted Mansion</title>
+    <link rel="stylesheet" href="styles/fred-mansion.css">
+    <script src="scripts/fred-mansion.js"></script>
+  </head>
+  <body background="img/ghosts.gif" onload="onKeyHit()">
+    <h5>Quick, hit any key and run for the front door!!!</h5>
+
+    <script type="text/javascript">
+
+    function onKeyHit(event) {
+      var x = event.which || event.keyCode;
+      // FUNCTION TO SWITCH TO 'room-1.html' AFTER .2 SECONDS
+      window.setTimeout(function() {
+          window.location.replace("room-1.html");
+      }, 200);
+      window.setTimeout();
+    }
+    document.onkeypress = onKeyHit;
+
+    </script>
+
+    <embed name="music" src="sounds/mansion-lightning.mp3" loop="false" autostart="false" hidden="true" mastersound />
+  </body>
+</html>

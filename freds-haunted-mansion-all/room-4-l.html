@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fred's Haunted Mansion</title>
+    <link rel="stylesheet" href="styles/fred-mansion.css">
+    <script src="scripts/fred-mansion.js"></script>
+
+    <!-- CSS TO MAKE BACKGROUND IMAGE RESIZE TO FIT ANY SCREEN -->
+    <style type="text/css">
+    body {
+      background: url('img/room-4.jpg') no-repeat fixed;
+      background-color: #000000;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+    }
+    </style>
+
+    <script type="text/javascript">
+    var userWidth = window.screen.width;
+    function moveLeft() {
+    var pp = document.getElementById("x");
+    var lft = parseInt(pp.style.right);
+    var tim = setTimeout("moveLeft()",15);  // 15 controls the speed
+    lft = lft+5;  // Moves image by 5 pixels
+    pp.style.right = lft+"px";
+    if (lft > userWidth + 10) {  // Right edge of image past the left edge of screen
+      pp.style.right = -200;    // Back to the right
+      clearTimeout(tim);
+      }
+    }
+    // FUNCTION TO SWITCH TO 'pirates.html' AFTER 3.7 SECONDS
+    window.setTimeout(function() {
+        window.location.replace("pirates.html");
+    }, 3700);
+    window.setTimeout();
+  </script>
+
+  </head>
+  <body background="img/room-4.jpg" onload="moveLeft()">
+    <img src="img/fred-left.gif" id="x" style="position:relative;top:367px;right:-640px;">
+  </body>
+</html>

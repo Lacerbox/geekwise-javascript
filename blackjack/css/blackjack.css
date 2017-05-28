@@ -1,0 +1,72 @@
+/* FOR IMPORTING FONTS */
+@import url('https://fonts.googleapis.com/css?family=Creepster');
+
+/* UNIVERSALS */
+body {
+  background-color: hsla(185, 95%, 60%, .3)
+}
+
+#card1 {
+  height: 208px;
+  width: 150px;
+  margin-top: 100px;
+}
+
+#card2 {
+  height: 208px;
+  width: 150px;
+  margin-top: 100px;
+}
+
+h1 {
+  color: #172724;
+  text-align: center;
+  font-weight: normal;
+  font-family: verdana;
+  font-size: 28px;
+}
+
+h2 {
+  color: #172724;
+  text-align: center;
+  font-weight: normal;
+  font-family: verdana;
+  font-size: 24px;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 4px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 24px;
+    margin: 4px 2px;
+    transition-duration: 0.2s; /* for 0.2 second transition on color change of button */
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #5c9999; /* #8bbaba; */
+    color: #000000;
+}
+
+.button1:hover {
+    background-color: #335752;
+    color: #ffffff;
+}
+
+/* TEXT FADE START */
+c {
+    font-weight: bold;
+    font-family: "verdana";
+    font-size: 28px;        /* FOR 'BLACKJACK!!!' */
+    animation: change 1s infinite;
+}
+@keyframes change {
+    from { color: #800000 }
+    to   { color: #ff3333 }
+}
+/* TEXT FADE END */
