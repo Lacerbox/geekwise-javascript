@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Arrays</title>
+</head>
+<body>
+Hello World!
+
+<script language = "JavaScript">
+
+console.log('Hello World!');
+
+var colors = ['red', 'orange', 'blue', 'green', 'yellow', 'pink'];
+console.log(colors);
+// Access element by index
+console.log(colors[1]);
+console.log(colors.length);
+
+var lastColor = colors[colors.length - 1];
+console.log(lastColor);
+
+// .forEach() LOOP
+colors.forEach(function(item, index) {
+  console.log(item + ' : ' + index);
+});
+
+// .isArray()
+ var trueOrFalse = Array.isArray(['red', 'orange', 'blue'])
+console.log(trueOrFalse);
+
+// .isArray()
+ var trueOrFalse = Array.isArray('red')
+console.log(trueOrFalse);
+
+// .isArray()
+ var trueOrFalse = Array.isArray(colors)
+console.log(trueOrFalse);
+
+var oneItemArray = ['one'];
+console.log(Array.isArray(oneItemArray));
+oneItemArray.push('two');
+oneItemArray.push(3);
+console.log(oneItemArray);
+oneItemArray.pop();
+console.log(oneItemArray);
+// Both 'shift' and 'pop' return item
+colors.unshift('greenish');
+console.log(colors);
+colors.shift();
+console.log(colors);
+
+var colorPosition = colors.indexOf('blue');
+console.log(colorPosition);
+
+colors.push('blue', 'green', 'yellow', 'pink');
+var lastBlue = colors.lastIndexOf('blue');
+console.log(lastBlue);
+
+// .splice([starting point], [what to delete], [what to add])
+var removeItem = colors.splice(3, 2); // Remove
+var addItem = colors.splice(2, 0, 'SkyBluePink', 'Poopie'); // Add
+console.log(colors);
+var removeAndAdd = colors.splice(5, 1, 'purply'); // Remove and Add
+console.log(colors);
+
+// Remove 'green' and 'blue' and put 'indigo' in their place
+colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+console.log(colors);
+var exerciseOne = colors.splice(colors.indexOf('green'), 2, 'indigo');
+console.log(colors);
+
+colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+
+var newColors = colors.slice(1, 3); // Doesn't change original array
+console.log(newColors);
+console.log(colors);
+
+var reversed = colors.reverse(); // Changes array
+console.log(colors);
+console.log(reversed);
+
+var numbers = [1, 20, 10, 2, 01, 22, 3, 4.5];
+console.log(numbers.sort());
+
+var words = ['word', 'Words', '1 Word', '2 Words', 'apple', 'Apple', 2];
+console.log(words.sort());
+
+ // Comparison sorting
+var numbers = [2, 4, 5, 1, 3];
+numbers.sort(function(a, b) {
+  return a - b;
+})
+console.log(numbers);
+
+//________________________________
+
+var points = [4, 2, 5, 1, 3];
+points.sort(function(a, b){
+    return a - b;
+});
+
+/* Here is the breakdown of the calculation:
+
+`2, 4`, 5, 1, 3 —— 2 is less than 4, move to the next two.
+2, `4, 5`, 1, 3 —— 4 is less than 5, move to the next two.
+2, 4, `5, 1`, 3 —— 5 is greater than 1... flip the numbers and work backward.
+2, `4, 1`, 5, 3 —— 4 is greater than 1... flip the numbers and work backward.
+`2, 1`, 4, 5, 3 —— 2 is greater than 1... flip the numbers. Continue from the index that began the direction shift.
+1, 2, 4, `5, 3` —— 5 is greater than 3... flip the numbers and work backward.
+1, 2, `4, 3`, 5 —— 4 is greater than 3... flip the numbers and work backward.
+1, `2, 3`, 4, 5 —— 2 is less than 3... sorting complete.
+
+if anyone is interested in what is happening with the .sort() method, here is one article:
+http://support.ecisolutions.com/doc-ddms/help/reportsmenu/ascii_sort_order_chart.htm */
+
+//________________________________
+
+// Assignment
+
+// 1. Use array of images
+// 2. Find random number between 1-20
+// 3. Output the corresponding image for the random number
+
+var images = [
+'http://planetoftheweb.com/i/8ball/19.png',
+'http://planetoftheweb.com/i/8ball/18.png',
+'http://planetoftheweb.com/i/8ball/17.png',
+'http://planetoftheweb.com/i/8ball/16.png',
+'http://planetoftheweb.com/i/8ball/15.png',
+'http://planetoftheweb.com/i/8ball/14.png',
+'http://planetoftheweb.com/i/8ball/13.png',
+'http://planetoftheweb.com/i/8ball/12.png',
+'http://planetoftheweb.com/i/8ball/11.png',
+'http://planetoftheweb.com/i/8ball/10.png',
+'http://planetoftheweb.com/i/8ball/9.png',
+'http://planetoftheweb.com/i/8ball/8.png',
+'http://planetoftheweb.com/i/8ball/7.png',
+'http://planetoftheweb.com/i/8ball/6.png',
+'http://planetoftheweb.com/i/8ball/5.png',
+'http://planetoftheweb.com/i/8ball/4.png',
+'http://planetoftheweb.com/i/8ball/3.png',
+'http://planetoftheweb.com/i/8ball/2.png',
+'http://planetoftheweb.com/i/8ball/1.png',
+'http://planetoftheweb.com/i/8ball/0.png'
+];
+
+document.write('Hello World! ' + 5 + 4); // To Write To HTML
+document.write('<h1>Hello World</h1>'); // To Write To HTML With HTML Element
+
+// Answer
+var randNum = Math.floor((Math.random() * 20));
+console.log(images[randNum]) // In 'Elements' in Chrome, click arrow on far left and then click on the image
+document.write("<img src='" + images[randNum] + "'>"); // to see what this line looks like in the html file
+
+</script>
+
+</body>
+</html>

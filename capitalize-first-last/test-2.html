@@ -1,0 +1,52 @@
+<html>
+<body>
+
+<h2>Please Enter Your First And Last Name</h2>
+<input id="toJav">
+<button onclick="changeCaseInName()">Click Here</button>
+<h2 id="fromJav"></h2>
+
+<script language = "JavaScript">
+
+// FUNCTION TEST-1 - TO GET THE FIRST AND LAST NAME FROM A USER, THEN MODIFY THE STRING
+// CAPITALIZING THE FIRST LETTER OF BOTH NAMES AND LOWERCASE ALL REMAINING LETTERS
+
+function changeCaseInName() {
+  var str = document.getElementById("toJav").value; // Gets information from html
+  if (str != "" && str != null) { // If nothing is entered, the rest of the function is skipped
+    console.log(str); // TO SEE WHAT'S GOING ON
+    // !!!!!***** THIS IS WHERE I LEFT OFF (Convert String To Array) *****!!!!!
+    var arr = str.split(" "); // To split the string into an array of substrings
+    console.log(arr);
+    var firstName = "", lastName = "", fullName = "";
+    var first = arr.shift();
+    var last = arr.pop();
+    console.log(first); // TO SEE WHAT'S GOING ON
+    console.log(last); // TO SEE WHAT'S GOING ON
+
+    for (var i = 0; i < first.length; i++) {
+      if (i === 0) {
+        firstName += (first[0].toUpperCase());
+        i++;
+      }
+      firstName += (first[i].toLowerCase());
+    }
+    for (var i = 0; i < last.length; i++) {
+      if (i === 0) {
+        lastName += (last[0].toUpperCase());
+        i++;
+      }
+      lastName += (last[i].toLowerCase()); //console.log(newStr);
+    }
+    fullName = firstName.concat(' ', lastName);
+    console.log(firstName.concat(' ', lastName)); // TO SEE WHAT'S GOING ON
+    console.log(fullName); // TO SEE WHAT'S GOING ON
+    document.getElementById("fromJav").innerHTML = fullName;
+  }
+  document.getElementById("toJav").value = ''; // To clear the box after user information is entered
+}
+
+</script>
+
+</body>
+</html>

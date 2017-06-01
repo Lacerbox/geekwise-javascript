@@ -1,0 +1,55 @@
+<html>
+<body>
+
+<script language = "JavaScript">
+
+// BUILD A FUNCTION TO CAPITALIZE THE FIRST LETTER OF EACH WORD IN A STRING
+function namesToTitleCase(aString) {
+  console.log(aString);
+  var stringToLowerCase = aString.toLowerCase();     // CONVERTS THE STRING TO LOWER CASE
+  console.log(stringToLowerCase);
+  var stringToArray = stringToLowerCase.split(' ');  // CONVERTS THE STRING TO AN ARRAY
+  console.log(stringToArray);
+
+  for(var i = 0 ; i < stringToArray.length ; i++) {  // LOOPS FOR THE NUMBER OF WORDS IN THE ARRAY USING '.length'
+    var wordsToLetters = stringToArray[i].split(''); // CONVERTS EACH WORD ARRAY INTO AN ARRAY OF LETTERS
+    console.log(wordsToLetters);
+    wordsToLetters[0] = wordsToLetters[0].toUpperCase(); // CONVERTS THE FIRST LETTER OF EACH WORD TO UPPER CASE
+    console.log(wordsToLetters);
+    console.log('stringToArray[i] (BEFORE): ' + stringToArray[i]);
+    var lettersBackToWords = wordsToLetters.join(''); // CONVERTS THE ARRAY OF LETTERS BACK INTO A STRING FOR EACH WORD
+    console.log("wordsToLetters.join(''): " + wordsToLetters.join(''));
+    console.log("lettersBackToWords: " + lettersBackToWords);
+    stringToArray[i] = lettersBackToWords; // COPIES EACH WORD BACK INTO THE ORIGINAL "stringToArray" ON EACH LOOP
+    //stringToArray[i] = wordsToLetters.join(''); // CONVERT LETTERS BACK TO WORDS AND THEN EACH WORD TO ORIGINAL "stringToArray"
+    console.log('stringToArray[i] (AFTER): ' + stringToArray[i]);
+    console.log(stringToArray);
+    var arrayBackToString = stringToArray.join(' '); // CONVERTS THE ARRAY BACK TO A STRING SEPARATING EACH WORD WITH A SPACE
+    console.log(arrayBackToString);
+  }
+  return arrayBackToString;                          // RETURNS THE NEW 'TITLE CASE' STRING
+}
+console.log(namesToTitleCase('loUiS aNGElO cErbO tHE gReaT'));
+
+//________________________________________________________________________________________________________________________
+
+// FUNCTION TO CAPITALIZE THE FIRST LETTER OF EACH WORD IN A STRING
+function namesToTitleCase(aString) {
+  var stringToLowerCase = aString.toLowerCase();         // CONVERTS THE STRING TO LOWER CASE
+  var stringToArray = stringToLowerCase.split(' ');      // CONVERTS THE STRING TO AN ARRAY
+
+  for(var i = 0 ; i < stringToArray.length ; i++) {      // LOOPS FOR THE NUMBER OF WORDS IN THE ARRAY USING '.length'
+    var wordsToLetters = stringToArray[i].split('');     // CONVERTS EACH WORD ARRAY INTO AN ARRAY OF LETTERS
+    wordsToLetters[0] = wordsToLetters[0].toUpperCase(); // CONVERTS THE FIRST LETTER OF EACH WORD TO UPPER CASE
+    var lettersBackToWords = wordsToLetters.join('');    // CONVERTS THE ARRAY OF LETTERS BACK INTO A STRING FOR EACH WORD
+    stringToArray[i] = lettersBackToWords;               // COPIES EACH WORD BACK INTO THE ORIGINAL "stringToArray" ON EACH LOOP
+    var arrayBackToString = stringToArray.join(' ');     // CONVERTS THE ARRAY BACK TO A STRING SEPARATING EACH WORD WITH A SPACE
+  }
+  return arrayBackToString;                              // RETURNS THE NEW 'TITLE CASE' STRING
+}
+console.log(namesToTitleCase('heRMaN cREepY mUNstER tHE fIRsT'));
+
+</script>
+
+</body>
+</html>

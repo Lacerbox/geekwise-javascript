@@ -1,0 +1,38 @@
+<html>
+<body>
+
+<h2>Please Enter Your First, Last & Middle Name</h2>
+<input id="toJav">
+<button onclick="changeCaseInName()">Click Here</button>
+<h2 id="fromJav"></h2>
+
+<script language = "JavaScript">
+
+// FUNCTION TEST-2 - TO GET THE MULTIPLE NAMES FROM A USER, THEN MODIFY THE STRING
+// CAPITALIZING THE FIRST LETTER OF ALL THE NAMES AND LOWERCASE ALL REMAINING LETTERS
+
+function changeCaseInName() {
+  var str = document.getElementById("toJav").value; // Gets information from html
+  if (str != "" && str != null) { // If nothing is entered, the rest of the function is skipped
+    var newStr = "";
+    for (var i = 0; i < str.length; i++) {
+      if (i === 0) {
+        newStr += (str[0].toUpperCase()); console.log('IF-1.1: ' + newStr); // TO SEE WHAT'S GOING ON
+        i++; console.log('IF-1.2: ' + newStr); // TO SEE WHAT'S GOING ON
+      }
+      if (str[i] === " ") {
+        i++; console.log('IF-2.1: ' + newStr); // TO SEE WHAT'S GOING ON
+        newStr += (' ' + str[i].toUpperCase());
+        i++; console.log('IF-2.2: ' + newStr); // TO SEE WHAT'S GOING ON
+      }
+      newStr += (str[i].toLowerCase()); console.log('ELSE: ' + newStr); // TO SEE WHAT'S GOING ON
+    }
+    document.getElementById("fromJav").innerHTML = newStr;
+  }
+  document.getElementById("toJav").value = ''; // To clear the box after user information is entered
+}
+
+</script>
+
+</body>
+</html>
