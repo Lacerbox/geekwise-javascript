@@ -1,0 +1,62 @@
+/* FOR IMPORTING FONTS */
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Lobster+Two:400,400i');
+
+/* Gets rid of underline on links */
+a {
+  text-decoration: none;
+}
+
+.for-ul {  /* FOR UN-ORDERED LIST */
+  color: teal;
+  font-family: verdana;
+}
+
+.li {  /* FOR LIST ITEM */
+  color: darkslategray;
+}
+
+/* FOR 'This Page is...' AT TOP OF PAGE */
+.line-1 {
+  color: teal;
+  font-family: verdana;
+  font-size: 15px;
+}
+
+/* FOR 'Luigi's Restaurant Presents' */
+.line-2 {
+  color: maroon;
+  font-family: 'Bad Script', 'Lobster Two', cursive;
+  font-size: 38px;
+}
+
+/* FOR 'The Italian Steak Sandwich' */
+.line-3 {
+  color: firebrick;
+  font-family: 'Lobster Two', 'Bad Script', cursive;
+  font-size: 30px;
+}
+
+/* FOR 'Sandwich Ingredients' */
+.line-4 {
+  color: seagreen;
+  font-family: 'Bad Script', 'Lobster Two', cursive;
+  font-size: 22px;
+}
+
+.for-button {  /* FOR BUTTON */
+  color: midnightblue;
+  font-family: verdana;
+}
+
+.close {
+  position: relative;
+  text-align: center;
+  font-family: verdana, arial, sans-serif;
+  font-size: 12pt;
+  color: #335752;
+  background-repeat: repeat; /* FOR 'Close Window' */
+}
+a:link    { color: #335752 }
+a:visited { color: #335752 }
+a:hover   { color: #8BBABA }
+a:active  { color: #54928B }

@@ -1,0 +1,75 @@
+<!-- <!DOCTYPE html> [THIS CAUSES SPACES THROUGHOUT AND SKEWS THE PAGE] -->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="italian restaurant">
+		<meta name="keywords" content="luigis, italian, food, dinners, sandwiches">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Luigi's Restaurant of Fresno</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	</head>
+
+  <body background="img/luigis_main_bg.jpg">
+
+		<audio id="audio" controls autoplay hidden="hidden" onloadeddata="setLowVolume()">
+			<source src="amore.wav" type="audio/wav">
+		</audio>
+
+		<!-- ********** MENU BAR BEGIN ********** -->
+	  <nav class="navbar navbar-default"> <!-- navbar-fixed-top">-->
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="http://home.luigisrestaurant.net/" target="_blank">
+		        <img alt="Luigi's Logo Small" src="img/luigis-logo-sm.gif">
+		      </a>
+		    </div>
+				<ul class="nav navbar-nav navbar-right">
+	        <li><a href="index.html">Home</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="memories.html">Memories</a></li>
+		      <li><a href="about.html">About Us</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+		  </div>
+		</nav>
+		<!-- ********** MENU BAR END ********** -->
+
+	  <div align="center"> <!-- for maped links in luigi main logo -->
+	    <h1><img src="img/luigis_main_logo.gif" border=0 usemap="#luigi" class="img-responsive"></h1><map name="luigi">
+	    <area shape="circle" coords="30,116, 4" href="http://family.luigisrestaurant.net/" target="_blank"> <!-- top olive -->
+	    <area shape="circle" coords="68,154, 4" href="http://where.luigisrestaurant.net/english-to-italian.html" target="_blank"> <!-- bottom olive -->
+	    <area shape="circle" coords="150,300, 700" href="menu.html"></map>
+	  </div>
+
+	  <br><br>
+    <div class="row">
+      <div class="col-md-3">
+        <a href="menu.html" class="luigis-menu"></a>
+      </div>
+      <div class="col-md-6">
+        <h2><span class="luigi1"><font color="#8b0000"><p>Home of the Original Italian Steak Sandwich</p></span></h2>
+        <div> <!-- the 'a' (anchor) tag calls the css 'a.button' -->
+          <h1><a href="http://where.luigisrestaurant.net/" target="_blank" class="button">Where is Luigi's?</a></h1>
+        </div>
+        <div><br><h3><span class="luigi2"><address><i>Last Updated: January 2017<br>
+          WebMaster: Louis A. Cerbo Luigi@LuigisRestaurant.net<br>&#169; Copyright 2017 Luigi's of Fresno, Inc.</i></address></span></h3>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <a href="about.html" class="history"></a>
+      </div>
+    </div>
+
+		<!-- javascript	 -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/amore.js"></script>
+
+	</body>
+</html>

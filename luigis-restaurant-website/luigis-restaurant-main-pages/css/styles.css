@@ -1,0 +1,159 @@
+/* FOR IMPORTING FONTS */
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Lobster+Two:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+/* UNIVERSALS */
+
+/* Hides the horizontal overflow and gets rid of the scroll bar */
+body{
+    overflow-x:hidden;
+}
+
+img.map, map area{
+    outline: none;
+}                    /* For removing blue dot outline after */
+                     /* clicking in image map area on index.html */
+img[usemap], map area{
+    outline: none;
+}
+
+/* NAVBAR SECTION BEGIN */
+.navbar-default {
+  background-color: transparent;  /* Makes Menu Bar Transparent */
+  border: none;                   /* Removes Border From Menu Bar */
+  font-family: 'Bad Script', cursive;
+  font-size: 15pt;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #335752;                      /* Makes Menu Text #335752 */
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: #fff;                            /* Keeps Menu Text White When Hovered Over */
+  background-color: rgba(0, 55, 25, .3);  /* For Transparent Gray Over Text When Hovered */
+}
+
+/* Not Using This As No Navbar Items Are 'active' */
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, .4);  /* For 'active' To Keep Colors Correct When Hovered Or Clicked */
+}
+/* NAVBAR SECTION END */
+
+.luigi1 {
+  text-align: center; /* FOR 'Home of the Original Italian Steak Sandwich' */
+  font-family: "arial";
+  font-size: 14pt; color: #335752;
+}
+
+.luigi2 {
+  text-align: center; /* FOR 'Copyright 2016 Luigi's of Fresno, Inc.' AND BOTTOM SECTION */
+  font-family: "arial";
+  font-size: 11pt; color: #8b0000;
+}
+
+img { /* CENTERS ALL IMAGES */
+  display: block;
+  margin: auto;
+}
+
+/* Gets rid of underline on links */
+a {
+  text-decoration: none;
+}
+/* 'text-decoration: none;' not working in Bootstrap */
+/* The following fixes the problem */
+a:hover,
+.a:hover {
+  text-decoration: none !important;
+}
+
+a.button { /* for the 'Where is Luigi's?' button */
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  margin-top: 90px; /* for button height */
+  text-align: center;
+  font-size:17;
+  font-family: "verdana";
+  font-weight: normal;
+  color:#335752;
+  background:#B9DDD6;
+  text-decoration: none;
+  color: initial;
+}
+
+h1 {
+  text-align: center; /* FOR 'luigis_main_logo.gif' */
+  margin-top: -20px; /* for height */
+  margin-bottom: -25px;
+  padding: 0 0 0 0px;
+}
+
+h2 {
+  text-align: center; /* FOR 'Home of the Original Italian Steak Sandwich' */
+  font-weight: bold;
+  margin-top: 40px; /* for height */
+  margin-bottom: -25px;
+  padding: 0 0 0 0px;
+}
+
+h3 {
+  text-align: center; /* FOR 'Copyright 2016 Luigi's of Fresno, Inc.' AND BOTTOM SECTION */
+  font-weight: normal;
+  margin-top: 75px; /* for height */
+  margin-bottom: -25px;
+  padding: 0 0 0 0px;
+}
+
+/* FOR FADE ON 'Home of the Original Italian Steak Sandwich' */
+p {
+  font-size: 18px;
+  animation: change 4s infinite;
+}
+
+@keyframes change {
+  from { color: #3d0000 }
+  to   { color: #ff4747 }
+}
+
+/* FOR MENU MOUSEOVER */
+.luigis-menu {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  background-repeat: no-repeat;
+  width: 152px;
+  height: 152px;
+  background-image: url('../img/luigis_menu_off.gif');
+}
+
+.luigis-menu:hover {
+  background: url('../img/luigis_menu_on.gif') no-repeat;
+}
+.luigis-menu:after {
+  content: url('../img/luigis_menu_on.gif');
+  display: none;
+}
+
+/* FOR HISTORY MOUSEOVER */
+.history {
+  display: block;
+  margin: auto;
+  margin-top: 100px;
+  background-repeat: no-repeat;
+  width: 222px;
+  height: 47px;
+  background-image: url('../img/luigis_history_blink.gif');
+}
+
+.history:hover {
+  background: url('../img/luigis_history_on.gif') no-repeat;
+}
+.history:after {
+  content: url('../img/luigis_history_on.gif');
+  display: none;
+}

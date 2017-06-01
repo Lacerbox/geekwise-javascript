@@ -1,0 +1,48 @@
+/* FOR IMPORTING FONTS */
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Lobster+Two:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+/* NAVBAR SECTION */
+.navbar-default {
+  background-color: transparent;  /* Makes Menu Bar Transparent */
+  border: none;                   /* Removes Border From Menu Bar */
+  font-family: 'Bad Script', cursive;
+  font-size: 15pt;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #fff;                      /* Makes Menu Text White */
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: #fff;                          /* Keeps Menu Text White When Hovered Over */
+  background-color: rgba(0, 0, 0, .3);  /* For Transparent Gray Over Text When Hovered */
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, .4);  /* For 'active' To Keep Colors Correct When Hovered Or Clicked */
+}
+
+h1 {
+  font-family: 'Bad Script', 'Lobster Two', cursive; /* FOR LUIGI'S (UPPER LEFT) */
+  font-weight: normal;
+  color: #fff;
+  font-size: 18pt;
+  margin-top: -5px; /* for height */
+}
+
+/* SLIDESHOW SECTION */
+img {
+  position: absolute;
+  display: block;
+  margin: auto;
+  /*margin-left: 18.2%;
+  margin-right: 18.2%;*/
+  transition: opacity .9s ease-in;
+}
+
+img + img {
+  opacity: 0;
+}

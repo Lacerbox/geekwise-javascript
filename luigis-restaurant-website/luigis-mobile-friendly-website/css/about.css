@@ -1,0 +1,163 @@
+/* FOR IMPORTING FONTS */
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Lobster+Two:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+/* (not using because "<div align="center"><h4><h5><img src="img/luigis-logo.gif"></h5></h4>" works better */
+.hero {
+  height: 300px;
+  width: 100%;
+  background-image: url('../img/luigis-logo.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#hero-header {
+  text-align: center;
+  color: #fff;
+  font-size: 75px;
+  padding-top: 10%;
+}
+
+/* NAVBAR SECTION BEGIN */
+.navbar-default {
+  background-color: transparent;  /* Makes Menu Bar Transparent */
+  border: none;                   /* Removes Border From Menu Bar */
+  font-family: 'Bad Script', cursive;
+  font-size: 15pt;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #335752;                      /* Makes Menu Text #335752 */
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: #fff;                            /* Keeps Menu Text White When Hovered Over */
+  background-color: rgba(155, 145, 43, .5);  /* For Transparent Gray Over Text When Hovered */
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, .4);  /* For 'active' To Keep Colors Correct When Hovered Or Clicked */
+}
+/* NAVBAR SECTION END */
+
+.luigi {
+  text-align: center;
+  font-family: "nadianne";
+  font-size: 12pt; color: #335752}
+
+/* CAROUSEL SECTION BEGIN */
+.carousel, .item {
+  height: 238px;
+  width: 902px;
+}
+
+.item {
+  background-size: cover;
+  background-position: center;
+}
+
+#luigis-banner-1 {
+  background-image: url('../img/luigis-banner-1.jpg');
+}
+
+#luigis-banner-2 {
+  background-image: url('../img/luigis-banner-2.jpg');
+}
+
+#restaurante-logo-hero {  /* Centers Restaurant Logo */
+  height: 170px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* CAROUSEL SECTION END */
+
+img { /* CENTERS ALL IMAGES */
+  display: block;
+  margin: auto;
+}
+
+h1 {
+  font-family: 'Lobster Two', 'Bad Script', cursive; /* FOR 1944-1993 */
+  font-weight: normal;
+  color: #335752;
+  font-size: 16pt;
+  margin-top: -15px; /* for height */
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-family: 'Bad Script', 'Lobster Two', cursive; /* FOR LUIGI'S (UPPER LEFT) */
+  font-weight: normal;
+  color: #335752;
+  font-size: 18pt;
+  margin-top: -5px; /* for height */
+}
+
+h3 {
+  margin-top: 40px; /* FOR 'gold.gif' */
+  margin-bottom: 40px;
+}
+
+h4 {
+  text-align: center;
+  font-family: "verdana";
+  font-size: 11pt;
+  color: #335752
+  display: block;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h5 {
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+h6 {
+  font-family: 'Bad Script', 'Lobster Two', cursive; /* FOR 'Luigi's Menu' LINK */
+  font-weight: bold;
+  color: #335752;
+  font-size: 18pt;
+  margin-top: 40px; /* for height */
+  margin-bottom: -10px;
+}
+
+/* Gets rid of underline on links */
+a {
+  text-decoration: none;
+}
+
+a:hover,
+.a:hover {
+   text-decoration: none !important;
+}
+
+#about-paragraph {
+  padding: 0 29px;
+  text-align: justify;
+  font-family: "verdana";
+  font-size: 12pt;
+  color: #335752
+}
+
+/* For Font Family Style */
+p.sansserif {
+  font-family: verdana, helvetica, sans-serif;
+}
+
+body {
+  font-family: arial, helvetica, sans-serif;
+  color: #335752;
+  background-repeat: repeat;
+}
+  a:link    { color: #335752 }
+  a:visited { color: #335752 }
+  a:hover   { color: #74aa90 }
+  a:active  { color: #74aa90 }

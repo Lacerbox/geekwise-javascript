@@ -1,0 +1,202 @@
+/* FOR IMPORTING FONTS */
+@import url('https://fonts.googleapis.com/css?family=Creepster');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+/* UNIVERSALS */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #335752;
+    background-repeat: repeat;
+}
+                            /* FOR TEXT HOVER COLOR CHANGE ON ALL LINKS IN BODY */
+a:link    { color: #335752 }
+a:visited { color: #335752 }
+a:hover   { color: #8BBABA }
+a:active  { color: #54928B }
+
+/* Gets rid of underline on left menu items */
+a {
+  text-decoration: none;
+}
+
+/* LEFT.HTML START */
+.luigi {
+    text-align: center;
+    font-family: "nadianne";
+    font-size: 12pt;
+    color: #335752;
+}
+
+/* For Font Family Style */
+p.serif {
+    font-family: "Times New Roman", Times, serif;
+}
+
+p.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* LEFT.HTML END */
+
+/* WHYFRED.HTML START */
+.whyfred1 {
+    font-family: "nadianne";
+    font-size: 16pt;
+    color: #B73122;
+}
+
+.whyfred2 {
+    font-family: "verdana";
+    font-size: 13pt;
+    color: #335752;
+}
+/* WHYFRED.HTML END */
+
+/* PICOFRED.HTML START */
+.picofred1 {
+    text-align: right;
+    font-family: "nadianne";
+    font-size: 16pt;
+    color: #B73122;
+}
+
+#picofred2 {
+    text-align: center;
+    margin-top: 335px; /* for 'Close Window' height */
+}
+
+h6 {
+    text-align: left;  /* FOR STEAK SANDWICH PICTURE */
+    margin-top: -60px; /* for height */
+}
+/* PICOFRED.HTML END */
+
+/* FINDCHILI.HTML & SEXY-LILY.HTML START */
+
+/* TEXT FADE START */
+z {
+    font-weight: normal; /* without this font is bold */
+    font-family: 'Creepster', cursive;
+    font-size: 28px;
+    animation: change 4s infinite;
+}
+
+@keyframes change {
+    from { color: #98e0eb }
+    to   { color: #328731 }
+}
+/* TEXT FADE END */
+
+/* FINDCHILI.HTML & SEXY-LILY.HTML END */
+
+/* FREDSVETTE.HTML START */
+.vette1 {
+    position: absolute; /* FOR 'Fred admires his Corvette...' */
+    top: 10px;
+    left: 30px;
+    font-size: 18pt;
+    font-family: "verdana";
+    color: #335752
+}
+
+.vette2 {
+    position: absolute; /* FOR '...and its awesome stereo too' */
+    top: 140px;
+    right: 264px;
+    font-size: 18pt;
+    font-family: "verdana";
+    color: #335752
+}
+
+.vette3 {
+    position: relative; /* FOR 'Close Window' */
+    text-align: center;
+    top: 600px;
+    font-size: 12pt;
+    font-family: "verdana";
+    color: #335752
+}
+
+.over1 {
+    position: absolute; /* FOR 'Fred' */
+    top: 130px;
+    left: 100px;
+    z-index: 2;
+}
+
+.under1 {
+    position: absolute; /* FOR 'Corvette' */
+    top: 50px;
+    left: 30px;
+    z-index: 1;
+}
+
+.over2 {
+    position: absolute; /* FOR 'Fred' */
+    top: 330px;
+    right: 30px;
+    z-index: 2;
+}
+
+.under2 {
+    position: absolute; /* FOR 'Corvette Stereo' */
+    top: 180px;
+    right: 30px;
+    z-index: 1;
+}
+
+.over3 {
+    position: absolute; /* FOR 'dr-smith-robot-will.gif' */
+    bottom: 5px;
+    left: 4px;
+    z-index: 2;
+}
+
+.over4 {
+    position: absolute; /* FOR 'Fred' */
+    bottom: 0px;
+    right: 0px;
+    z-index: 2;
+}
+
+.under4 {
+    position: absolute; /* FOR 'jupiter-2-launch-pad.jpg' */
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+/* FREDSVETTE.HTML END */
+
+/* LOUCOOK.HTML & ABOUT.HTML START */
+.loucook1 {
+    text-align: center;
+    font-size: 22pt;
+    font-weight: normal; /* without this font is bold */
+    font-family: 'Lobster Two', 'Bad Script', cursive;
+    color: #8b0000;
+}
+
+.loucook2 {
+    text-align: left;
+    font-weight: normal; /* without this font is bold */
+    font-family: "verdana";
+    font-size: 14pt;
+    color: #8b0000;
+}
+
+#loucook-paragraph {
+    padding: 0 16px;
+    text-align: justify;
+}
+/* LOUCOOK.HTML & ABOUT.HTML END */
+
+/* MEATBALL.HTML START */
+.meatball {
+    text-align: center;
+    font-size: 22pt;
+    font-weight: normal; /* without this font is bold */
+    font-family: 'Lobster Two', 'Bad Script', cursive;
+    color: #8b0000;
+}
+/* MEATBALL.HTML END */

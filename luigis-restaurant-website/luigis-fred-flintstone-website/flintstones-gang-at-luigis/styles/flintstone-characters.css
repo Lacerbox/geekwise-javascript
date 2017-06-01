@@ -1,0 +1,83 @@
+body {
+    font-family: verdana, arial, sans-serif;
+    color: #335752;
+    background-repeat: repeat;
+}
+                            /* FOR TEXT HOVER COLOR CHANGE ON ALL LINKS IN BODY */
+a:link    { color: #335752 }
+a:visited { color: #335752 }
+a:hover   { color: #8BBABA }
+a:active  { color: #54928B }
+
+body {
+  overflow:hidden;
+}
+
+/* Gets rid of underline on links */
+a {
+  text-decoration: none;
+}
+/* 'text-decoration: none;' not working in Bootstrap */
+/* The following fixes the problem */
+a:hover,
+.a:hover {
+  text-decoration: none !important;
+}
+
+h1 {
+  font-size: 26px;
+  font-family: verdana;
+  color: #335752;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 165px;
+  font-size: 20px;
+  font-family: verdana;
+  color: #246b43;
+}
+
+h4 {
+  color: #b80000;
+}
+
+h5 {
+  text-align: right;
+  margin-top: -25px;
+  margin-right: 7px;
+  font-family: verdana;
+  color: #335752;
+}
+
+button {
+  margin-left: 275px;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  font-family: verdana;
+}
+
+/* FOR FRED MOUSEOVER */
+.fred {
+    background-repeat: no-repeat;
+    margin-left: -100px;
+    width: 200px;
+    height: 125px;
+    background-image: url('../img/fred-steak-sand.jpg');
+    position: absolute;
+}
+
+/* FIXES IMAGE BLINK ON FIRST TIME HOVER */
+.fred:hover {
+    background: url('../img/fred-steak-sand_on.jpg') no-repeat;
+}
+.fred:after {
+    content: url('../img/fred-steak-sand_on.jpg');
+    display: none;
+}
+
+/* FOR 'Flintstones Gang At Luigi's' BUTTON */
+.for-button {
+  color: midnightblue;
+  font-family: verdana;
+}

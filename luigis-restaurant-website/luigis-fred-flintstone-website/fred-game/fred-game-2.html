@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fred Flintstone Game</title>
+    <link rel="stylesheet" href="styles/fred-game.css">
+    <script src="scripts/fred-game.js"></script>
+
+    <script language="JavaScript">
+    /* FUNCTION TO CLOSE PAGE AFTER 14 SECONDS */
+    function closeWindow() {
+        setTimeout(function() {
+        window.close();
+      }, 14000); /* 14000 = 14 Seconds */
+    }
+    window.onload = closeWindow();
+    </script>
+
+  </head>
+  <body background="img/fred-game-bg.jpg">
+    <img src="img/fred-wilma.gif" align="right"><br>
+    <br><h2>NOW you've done it! You pissed Fred off! Now Wilma's all upset with him. We told you not to enter his picture of "Roxy".<br><br>Now someone "IS" gonna get hurt!</h2>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+/* HEADER STYLES FOR CONTACT.HTML */
+
+#iframe-wrapper {
+    text-align: center;
+    margin-top: 150px;
+    /*padding-top: 300;*/
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+iframe {
+    border-bottom: 3px solid #e40007; /*ridge*/
+    /*margin: 0 auto;*/
+}

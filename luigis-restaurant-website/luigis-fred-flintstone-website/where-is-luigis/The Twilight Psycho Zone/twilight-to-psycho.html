@@ -1,0 +1,76 @@
+<html>
+  <head>
+  <title>Twilight to Psycho</title>
+
+  <!-- HTML meta refresh URL redirection (Not Using) - REDIRECTS AFTER 10 SECONDS -->
+  <!-- <meta http-equiv="refresh" content="10; url=entering-psycho-zone.html"> -->
+
+  <!-- HTML meta refresh URL redirection (Using) - REDIRECTS AFTER 10 SECONDS -->
+  <meta http-equiv="refresh" content="10; url='entering-psycho-zone.html'" />
+
+  <style type="text/css">
+
+  @import url('https://fonts.googleapis.com/css?family=Creepster');
+
+  p {
+    font-weight: normal; /* without this font is bold */
+    font-family: 'Creepster', cursive;
+    font-size: 28pt;
+    color: #335752
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 320px; /* for 'Click for Luigi's CREEPY Neighbor' height */
+  }
+
+  .grow { /* text transitionally expands on mouseover and then transitionally retracts when mouse removed */
+    transition: all .2s ease-in-out;
+  }
+
+  .grow:hover {
+    -webkit-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    transform: scale(2.5); /* size text grows to */
+  }
+
+  /*.grow:hover /* text transitionally expands on mouseover and then instantly retracts when mouse removed
+  {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3); /* size text grows to
+    transition: all 0.3s ease; /* text grows on mouseover
+  }*/
+
+  /* Gets rid of underline on links */
+  a {
+    text-decoration: none;
+  }
+
+  /* FOR FADE/BLINK */
+  c {
+    font-size: 28pt;
+    animation: change 3s infinite;
+  }
+
+  @keyframes change {
+    from { color: #98e0eb }
+    to   { color: #328731 }
+  }
+
+  </style>
+
+  </head>
+
+  <!-- <body background="luigis_bg_dk.jpg" bgcolor="#000000"> -->
+  <body bgcolor="#000000">
+
+  <embed name="music" src="zone.mp3" loop="false"
+  autostart="false" hidden="true" mastersound />
+
+  <div class="grow">
+    <h1><a href="entering-psycho-zone.html"><p><c>Click for Luigi's CREEPY Neighbor!</c></p></a></h1>
+  </div>
+
+  </body>
+</html>

@@ -1,0 +1,54 @@
+/* FOR IMPORTING FONTS */
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Lobster+Two:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+body {
+	font-size: 62.5%;
+	font-family: Helvetica, sans-serif;
+	background: url(../img/luigis_main_bg.jpg) repeat;
+}
+
+/* Gets rid of underline on links */
+a {
+  text-decoration: none;
+}
+
+a:hover,
+.a:hover {
+   text-decoration: none !important;
+}
+
+h1 {
+  /* FOR 'Contact Us' */
+  text-align: center;
+  font-size: 28pt;
+  font-family: 'Bad Script', 'Lobster Two', cursive;
+  font-weight: normal;
+  color: #335752;
+  margin-top: 25px;
+}
+
+h2 {
+  font-family: 'Bad Script', 'Lobster Two', cursive; /* FOR LUIGI'S (UPPER LEFT) */
+  font-weight: normal;
+  color: #335752;
+  font-size: 18pt;
+  margin-top: -5px; /* for height */
+}
+
+#contact-background {
+	width: 660px;
+	background: #ceece0;
+	padding: 20px 50px 20px 50px;
+	margin: 20px 340px;
+	min-height: 520px;
+	/*height: auto !important;*/
+	height: 520px;
+  margin-top: 45px;
+}
+
+#contact-area {
+	width: 560px;
+	margin-top: 25px;
+}

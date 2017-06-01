@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fred's Haunted Mansion</title>
+    <link rel="stylesheet" href="styles/fred-mansion.css">
+    <script src="scripts/fred-mansion.js"></script>
+
+    <!-- CSS TO MAKE BACKGROUND IMAGE RESIZE TO FIT ANY SCREEN -->
+    <style type="text/css">
+    body {
+      background: url('img/hatbox_ghost.gif') no-repeat fixed;
+      background-color: #000000;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+    }
+    </style>
+
+  </head>
+  <body background="img/hatbox_ghost.gif">
+    <h1>Oh Crap! Quick, enter 'Exit' again to get out!<br>
+    <input id="toJav" onKeydown="if (event.keyCode===13) toExitAgainHatbox()">
+    <button class="button button1" onclick="toExitAgainHatbox()">Enter 'Exit'</button></h1>
+    <!--<h1><p id="fromJav"></p></h1>-->
+    <img id="scared" src="img/fred-scared.gif">
+    <embed name="music" src="sounds/screams.mp3" loop="false" autostart="true" hidden="true" mastersound />
+  </body>
+</html>

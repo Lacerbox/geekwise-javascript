@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fred's Haunted Mansion</title>
+    <link rel="stylesheet" href="styles/fred-mansion.css">
+    <script src="scripts/fred-mansion.js"></script>
+
+    <!-- CSS TO MAKE BACKGROUND IMAGE RESIZE TO FIT ANY SCREEN -->
+    <style type="text/css">
+    body {
+      background: url('img/room-4.jpg') no-repeat fixed;
+      background-color: #000000;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+    }
+    </style>
+
+    <script type="text/javascript">
+    var userWidth = window.screen.width;
+    function moveRight() {
+    var pp = document.getElementById("x");
+    var lft = parseInt(pp.style.left);
+    var tim = setTimeout("moveRight()",15);  // 15 controls the speed
+    lft = lft+5;  // Moves image by 5 pixels
+    pp.style.left = lft+"px";
+    if (lft > userWidth + 10) {  // Left edge of image past the right edge of screen
+      pp.style.left = -200;     // Back to the left
+      clearTimeout(tim);
+      }
+    }
+    // FUNCTION TO SWITCH TO 'hatbox-ghost.html' AFTER 3.7 SECONDS
+    window.setTimeout(function() {
+        window.location.replace("hatbox-ghost.html");
+    }, 3700);
+    window.setTimeout();
+  </script>
+
+  </head>
+  <body background="img/room-4.jpg" onload="moveRight()">
+    <img src="img/fred-right.gif" id="x" style="position:relative;top:367px;left:500px;">
+  </body>
+</html>

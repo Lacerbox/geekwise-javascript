@@ -1,0 +1,251 @@
+/* UNIVERSALS */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gets rid of underline on links */
+a {
+  text-decoration: none;
+}
+/* 'text-decoration: none;' not working in Bootstrap */
+/* The following fixes the problem */
+a:hover,
+.a:hover {
+  text-decoration: none !important;
+}
+
+/* always put a space between declarations */
+a:hover, a:visited { /* make 2 separate declarations to make "hover" and "visited" different colors */
+    color: #272822; /* this makes "hover" and "visited" #272822 color */
+}
+
+/* HEADER STYLES (MENU BAR BEGIN) */
+header {
+    position: fixed; /* Keeps menu bar in view fixed at top of screen as you scroll down */
+    z-index: 1; /* KEEPS IMAGES ON PAGE BEHIND MENU BAR WHEN SCROLLING */
+    top: 0;     /* The z-index property specifies the stack order of an element (higher number in front) */
+    left: 0;    /* An element with greater stack order is always in front of an element with a lower stack order */
+    right: 0;   /* Note: z-index only works on positioned elements (position:absolute, position:relative, or position:fixed) */
+}
+
+ul {
+    list-style-type: none; /* for text links and no bullets */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8bbaba; /* for menu bar background color */
+}
+
+li {
+    float: left;
+    border-right:1px solid #44746d; /* for thin border line (1px) */
+}
+
+li:last-child {
+    border-left:1px solid #44746d; /* border-right: none; (for no thin border on "About") */
+}
+
+#nav-links li a {
+    display: block; /* for menu bar block height */
+    color: #335752; /* for all text color */
+    text-align: center;
+    font-family: "verdana";
+    font-size: 12pt;
+    padding: 12px 16px; /* for menu bar height, for menu item width */
+    text-decoration: none; /* for no underline on text */
+}
+
+#nav-links li a:hover:not(.active) {
+    background-color: #cce0e0; /* for mouse over */
+}
+
+.active {
+    background-color: #cce0e0; /* for "Home" background color */
+}
+/* MENU BAR END */
+
+/* HERO SECTION (upfront image, banner) */
+.painting {
+    height: 658px;
+    width: 420px;
+    background: #8bbaba;
+    margin-top: 35px;
+    border:1px solid #335752;
+    background-image: url('../img/luigis-painting-signature.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* MAIN CONTENT */
+main {
+    position: relative;
+    float: center;
+}
+
+h1 {
+    margin-top: 75px; /* for luigi's main logo height */
+}
+
+h2 {
+    text-align: center; /* FOR 'Welcome to Luigi's Restaurant' */
+    font-size: 19pt;
+    font-family: "verdana";
+    color: #335752
+}
+
+h3 {
+    margin-top: 90px; /* for left side food pics height */
+    margin-bottom: 25px;
+    padding: 0 0 0 0px;
+    font-size: 11pt;
+    font-weight: bold;
+    font-family: "verdana";
+    color: #335752
+}
+
+h4 {
+    margin-top: 105px; /* for right side menu height */
+    margin-bottom: 25px;
+    padding: 0 0 0 0px;
+    font-size: 11pt;
+    font-weight: bold;
+    font-family: "verdana";
+    color: #335752
+}
+
+h5 {
+    font-size: 11pt; /* for 'Specializing... & Excellent...' height */
+    font-weight: bold;
+    font-family: "verdana";
+    color: #335752
+}
+
+/* START TEXT FADE */
+h6 {
+    margin-top: 60px;
+    font-size: 18px; /* FOR 'Home of the Original Italian Steak Sandwich' */
+    font-family: "verdana";
+    animation: change 4s infinite;
+}
+
+@keyframes change {
+    from { color: #3d0000 }
+    to   { color: #ff4747 }
+}
+/* END TEXT FADE */
+
+/* MENU SECTION BEGIN */
+.column {
+    float: left;
+    width: 32.5%;
+    padding: 0 5px;
+    text-align: justify;
+    /*overflow: scroll;*/
+    min-height: 450px;
+    font-family: "verdana";
+    color: #335752
+}
+
+.column-1 {
+    text-align: left;
+}
+
+.column-2 {
+    padding: 0 0 0 0px;
+}
+
+.column-3 {
+    text-align: right;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 12px;
+    margin: 4px 2px;
+    transition-duration: 0.2s; /* for 0.2 second transition on color change of button */
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #8bbaba;
+    color: #000000;
+}
+
+.button1:hover {
+    background-color: #335752;
+    color: #ffffff;
+}
+/* MENU SECTION END */
+
+/* FOR MOUSEOVER */
+.luigis-menu {
+    display: block;
+    margin-top: -5px;
+    margin-bottom: 35px;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    background-image: url('../img/luigis_menu_off.gif');
+}
+
+/* FIXES IMAGE HOVER FIRST TIME BLINKING */
+.luigis-menu:hover {
+    background: url('../img/luigis_menu_on.gif') no-repeat;
+}
+
+.luigis-menu:after {
+    content: url('../img/luigis_menu_on.gif');
+    display: none;
+}
+
+/* FOOTER SECTION */
+footer {
+    background-color: #3c6761;
+    color: #d6ebe7;
+    height: 130px;
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clear: both; /* clear floats after elements */
+}
+
+.fa {
+    font-size: 42px;
+    padding: 0 12px;
+}
+
+footer a {
+    font-family: arial, helvetica, sans-serif;
+    color: #ffffff;
+    background-repeat: repeat
+}
+    footer a:link    { color: #ffffff }
+    footer a:visited { color: #ffffff }
+    footer a:hover   { color: #8bbaba }
+    footer a:active  { color: #ffffff }
+
+#social-media {
+    text-align: center;
+    padding-top: 24px;
+}
+
+#copyright {
+    text-align: center;
+    font-family: "verdana";
+    font-size: 12pt;
+    padding-top: 40px;
+    text-decoration: none;
+}

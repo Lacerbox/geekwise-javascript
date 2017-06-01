@@ -1,0 +1,183 @@
+<html>
+<head>
+<title>The Luigi's Zone</title>
+
+<style type="text/css">
+
+  .split-para      { display:block;margin:10px;}
+  .split-para span { display:block;float:right;width:50%;margin-left:10px;}
+
+  <!--
+    .luigi { text-align: left;
+      font-family: "Verdana"; 
+      font-size: 24pt; color: #add8e6}
+    .luigi1 { text-align: left;
+      font-family: "Verdana"; 
+      font-size: 11pt; color: #add8e6}
+    .luigi2 { text-align: center;
+      font-family: "Verdana"; 
+      font-size: 13pt; color: #add8e6}
+  -->
+
+  .left-under
+  {
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+  }
+  .left-over-l
+  {
+    position:absolute;
+    top: 25px;
+    left: 24px;
+    z-index: 2;
+  }
+  .left-over-r
+  {
+    position:absolute;
+    top: 25px;
+    left: 62px;
+    z-index: 3;
+  }
+
+  .right-under
+  {
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 4;
+  }
+  .right-over-l
+  {
+    position:absolute;
+    top: 26px;
+    right: 23px;
+    z-index: 5;
+  }
+  .right-over-r
+  {
+    position:absolute;
+    top: 26px;
+    right: 62px;
+    z-index: 6;
+  }
+
+a.button { /* for the 'Exit The Luigi's Zone' button */
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    font-size:16;
+    font-family:Verdana;
+    color:#335752;
+    background:#B9DDD6;
+    text-decoration: none;
+    color: initial;
+}
+
+/* FOR FADE/BLINK */
+c {
+    font-size: 15px;
+    animation: change 3s infinite;
+}
+
+@keyframes change {
+    from { color: #baebf2 }
+    to   { color: #0f1a18 }
+}
+
+</style>
+
+<script language="JavaScript">
+<!--
+
+//****************************//
+var stream_width        = 5;
+var max_segments        = 40;
+var max_segment_length  = 20;
+var glow_color          = "#3399FF"
+var fork_top            = 0;
+//***************************//
+
+  var striker = ""
+  var angle_holder = new Array();
+  var length_holder = new Array();
+  length_holder[0]  = fork_top;
+  var temp = length_holder[0];
+  var last_pos = 0;
+  dot = new Image();dot.src = "dot.gif";
+
+  function strike()
+  {
+    with (Math)
+    {
+      disp = round((random() * 100))
+      timer = round((random() * 200))
+      y = round((floor(random()*document.body.offsetWidth)-30))
+      seglen = round((random()*max_segment_length))
+      length_holder[1] = round(((random() * 2)*seglen))
+      for(a=0;a<max_segments+1;a++){angle_holder[a] = round((random() * 4) - ((random()*2)*2))}
+      for(a=1;a<max_segments+1;a++){length_holder[a] = round(length_holder[a-1] + ((random() * 2)*seglen))}
+    }
+    for(count=0;count<max_segments+1;count++)
+    {
+      for(x=temp;x<length_holder[count];x+=3)
+      {
+        y+=angle_holder[count]
+        striker+='<img src="'+dot.src+'" style="position:absolute;top:'+x+';left:'+y+';height:'+stream_width+';width:'+stream_width+';filter:GLOW(color='+glow_color+')">'
+      }
+      temp = length_holder[count]
+      last_pos = x;
+    }
+
+    holder.innerHTML = striker
+    if(last_pos > (document.body.offsetHeight - 20))
+    {
+      // GROUND
+    }
+    striker = ""
+    setTimeout("holder.innerHTML = striker",disp)
+    setTimeout("strike()",timer)
+  }
+//-->
+
+/* FUNCTION TO CLOSE PAGE AFTER 29 SECONDS */
+function closeWindow() {
+    setTimeout(function() {
+    window.close();
+    }, 29000); /* 29000 = 29 Seconds */
+}
+
+window.onload = closeWindow();
+
+</script>
+
+</head>
+
+  <body background="luigis_bg_dk.jpg" bgcolor="black" onload="strike()">
+
+  <span id="holder"></span>
+
+  <embed name="music" src="thunder.mp3" loop="false"
+  autostart="false" hidden="true" mastersound />
+
+  <img src="eyeballs.gif" class="left-under">
+  <img src="eye.gif" class="left-over-l">
+  <img src="eye.gif" class="left-over-r">
+
+  <img src="eyeballs.gif" class="right-under">
+  <img src="eye.gif" class="right-over-l">
+  <img src="eye.gif" class="right-over-r">
+
+  <br><br><br>
+  <center><img src="luigis_restaurant_night.gif" border=2 style="border-color: lightblue"></center>
+
+  <center> <!-- the 'a' (anchor) tag calls the css 'a.button' -->
+  <br><a href="JavaScript:window.close()" class="button">Exit The Luigi's Zone</a> <!-- closes page when "Exit..." is clicked -->
+  </center>
+
+<span class="luigi1">To find Luigi's Restaurant just drive down Blackstone Avenue until you see the building in the above picture. When you spot it pull into the parking lot, then park and lock your car. As you walk into the entrance and approach the host, you'll notice that you recognize him. When the fog clears you realize that he's <b>Rod Serling</b> and you're most likely in <b>The Twilight Zone</b> since you’re in a restaurant that... <c><b>Exists Only in the Past!!!</b></c></span>
+
+  </body>
+</html>

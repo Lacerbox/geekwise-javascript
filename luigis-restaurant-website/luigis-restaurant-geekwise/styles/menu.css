@@ -1,0 +1,55 @@
+/* HEADER STYLES FOR MENU.HTML */
+
+/* HERO SECTION (using) */
+.hero {
+    height: 400px;
+    width: 100%;
+    background-image: url('../img/pizza.jpg');
+    /* background-size: 950px 55%; */ /* COMMENT: width, height, cover; */
+    background-size: cover; /*contain; /*950px 55%;*/ /*width, height*/ /*cover;*/
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.column {
+    float: left;
+    width: 32.5%;
+    padding: 0 5px;
+    text-align: justify;
+    /*overflow: scroll;*/
+    min-height: 450px;
+    font-family: "verdana";
+    color: #335752
+}
+
+h2 {
+    text-align: center;
+    font-size: 14pt;
+    font-family: "verdana";
+    color: #335752
+}
+
+.button {
+    /* background-color: #; */
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family:Verdana;
+    font-size: 12px;
+    margin: 4px 2px;
+    transition-duration: 0.2s; /* for 0.2 second transition on color change of button */
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #8bbaba; 
+    color: #000000; 
+}
+
+.button1:hover {
+    background-color: #335752;
+    color: #ffffff;
+}

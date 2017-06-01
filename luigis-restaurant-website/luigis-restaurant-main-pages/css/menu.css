@@ -1,0 +1,278 @@
+/* FOR IMPORTING FONTS */
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Lobster+Two:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+/* Gets rid of underline on links */
+a {
+  text-decoration: none;
+}
+/* 'text-decoration: none;' not working in Bootstrap */
+/* The following fixes the problem */
+a:hover,
+.a:hover {
+  text-decoration: none !important;
+}
+
+li {
+    list-style-type: none; /* gets rid of bullets */
+    display: inline;
+}
+
+/* NAVBAR SECTION BEGIN */
+.navbar-default {
+  background-color: transparent;  /* Makes Menu Bar Transparent */
+  border: none;                   /* Removes Border From Menu Bar */
+  margin-left: 408px;
+  width:449px;
+  font-family: 'Bad Script', 'Lobster Two', cursive;
+  font-size: 16pt;
+  word-spacing: 12;
+}
+
+c {
+  word-spacing: -1;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #800000;                      /* Makes Menu Text Dark Red */
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: #fff;                          /* Keeps Menu Text White When Hovered Over */
+  background-color: rgba(90, 0, 0, .4);  /* For Transparent Red Over Text When Hovered */
+}
+
+/* Not Using This As No Navbar Items Are 'active' */
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, .4);  /* For 'active' To Keep Colors Correct When Hovered Or Clicked */
+}
+/* NAVBAR SECTION END */
+
+/* CAROUSEL SECTION BEGIN */
+.css-carousel {
+	width: 605px;
+	height: 95px; /* Height of images */
+	position: relative;
+	overflow: hidden;
+}
+.css-carousel .css-img {
+	max-width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	-webkit-animation: css-carousel-fade 30s linear infinite;
+	-moz-animation: css-carousel-fade 30s linear infinite;
+	-ms-animation: css-carousel-fade 30s linear infinite;
+	animation: css-carousel-fade 30s linear infinite;
+}
+.css-carousel .css-img:nth-child(2) {
+	-webkit-animation-delay: 5s;
+	-moz-animation-delay: 5s;
+	-ms-animation-delay: 5s;
+	animation-delay: 5s;
+}
+.css-carousel .css-img:nth-child(3) {
+	-webkit-animation-delay: 10s;
+	-moz-animation-delay: 10s;
+	-ms-animation-delay: 10s;
+	animation-delay: 10s;
+}
+.css-carousel .css-img:nth-child(4) {
+	-webkit-animation-delay: 15s;
+	-moz-animation-delay: 15s;
+	-ms-animation-delay: 15s;
+	animation-delay: 15s;
+}
+.css-carousel .css-img:nth-child(5) {
+	-webkit-animation-delay: 20s;
+	-moz-animation-delay: 20s;
+	-ms-animation-delay: 20s;
+	animation-delay: 20s;
+}
+.css-carousel .css-img:nth-child(6) {
+	-webkit-animation-delay: 25s;
+	-moz-animation-delay: 25s;
+	-ms-animation-delay: 25s;
+	animation-delay: 25s;
+}
+@-webkit-keyframes css-carousel-fade {
+    0%, 20%, 100% { opacity: 0; }
+    5%, 15% { opacity: 1;}
+}
+@-moz-keyframes css-carousel-fade {
+    0%, 20%, 100% { opacity: 0; }
+    5%, 15% { opacity: 1;}
+}
+@-ms-keyframes css-carousel-fade {
+    0%, 20%, 100% { opacity: 0; }
+    5%, 15% { opacity: 1;}
+}
+@keyframes css-carousel-fade {
+	0%, 20%, 100% { opacity: 0; }
+	5%, 15% { opacity: 1;}
+}
+/* CAROUSEL SECTION END */
+
+h1 {
+    text-align: center; /* FOR 'luigis_main_logo.gif' */
+    margin-top: -35px; /* for height */
+    margin-bottom: -25px;
+    margin-left: -245;
+}
+
+h2 {
+    text-align: center; /* FOR 'Brings You "Fine Foods By Rose"' MINI BANNER */
+    margin-top: 30px;
+    margin-left: -237px; /* WORKS SAME AS 'padding: 0 0 0 60px;' */
+    font-size: 28pt;
+    font-weight: bold;
+    font-family: 'Bad Script', 'Lobster Two', cursive;
+    color: #800000;
+}
+
+h3 {
+    text-align: center; /* FOR 'Specializing In European Cuisine' */
+    margin-top: -167px;
+    margin-bottom: -25px;
+    margin-left: 615px;
+    font-size: 18pt;
+    letter-spacing: 1.5pt;
+    font-weight: normal;
+    font-family: 'Lobster Two', 'Bad Script', cursive;
+    color: #800000;
+}
+
+h4 {
+    text-align: center; /* FOR 'Excellent Gourmet Food' */
+    margin-top: 35px;
+    margin-bottom: -25px;
+    margin-left: 615px;
+    font-size: 14pt;
+    letter-spacing: 1.5pt;
+    font-weight: bold;
+    font-family: 'Lobster Two', 'Bad Script', cursive;
+    color: #800000;
+}
+
+h5 {
+    text-align: center; /* FOR 'Phone & Email' */
+    margin-top: 35px;
+    margin-bottom: -25px;
+    margin-left: 615px;
+    font-size: 11pt;
+    letter-spacing: 1.5pt;
+    font-weight: normal;
+    font-family: "verdana";
+    color: #800000;
+}
+
+/*h6 {
+    text-align: center;
+    margin-top: -96px;
+}*/
+
+.italian-bar {
+  margin-top: 70px; /* FOR RED AND GREEN BAR */
+}
+
+.heading-1 {
+    margin-top: 55px; /* for heading 1 height */
+}
+
+.heading-2 {
+    margin-top: 55px; /* for heading 2 height */
+}
+
+.heading-3 {
+    margin-top: 55px; /* for heading 3 height */
+}
+
+.heading-4 {
+    margin-top: 55px; /* for heading 4 height */
+}
+
+.menu {
+  padding: 0 75px;
+  text-align: justify;
+  font-family: "verdana"; /* FOR MENU ITEMS */
+  font-size: 16;
+  color: #26403d;
+}
+
+d {
+     /* FOR THE WORD 'Luigi's Menu' AT BEGINNING OF MENU */
+    font-size: 28pt;
+    font-family: 'Bad Script', 'Lobster Two', cursive;
+    font-weight: bold;
+    color: #800000;
+}
+
+e {
+    font-size: 16pt; /* FOR MENU HEADINGS */
+    font-family: 'Bad Script', 'Lobster Two', cursive;
+    font-weight: bold;
+    color: #800000;
+}
+
+f {
+    margin-top: 0px; /* FOR MENU SUB-HEADINGS */
+    font-size: 11pt;
+    font-family: "verdana";
+    font-weight: normal;
+    font-style: italic;
+    color: #26403d;
+}
+
+sp {
+    font-size: 20pt; /* FOR 'Special' */
+    font-family: 'Bad Script', 'Lobster Two', cursive;
+    font-weight: bold;
+    color: #800000;
+}
+
+rav {
+    font-size: 12pt; /* FOR 'Ravioli's are fresh frozen...' */
+    font-family: "verdana";
+    font-weight: normal;
+    font-style: normal;
+    color: #800000;
+}
+
+/* TEXT FADE START */
+x {
+    font-weight: normal; /* without this font is sometimes bold */
+    font-family: "verdana";
+    font-size: 17px;        /* FOR 'How Our Famous Italian Steak Sandwich Came To Be' */
+    animation: change 3s infinite;
+}
+
+y {
+    font-weight: normal; /* without this font is sometimes bold */
+    font-family: "verdana";
+    font-size: 18px;        /* FOR 'NEW' */
+    animation: change 1s infinite;
+}
+
+z {
+    font-weight: normal; /* without this font is sometimes bold */
+    font-family: "verdana";
+    font-size: 18px;        /* FOR 'Luigi's Original Homemade Meat & Cheese and Spinach & Cheese Ravioli' */
+    animation: change 4s infinite;
+}
+
+@keyframes change {
+    from { color: #8b0000 }
+    to   { color: #ff3333 }
+}
+/* TEXT FADE END */
+
+#copyright-section {
+  text-align: center;
+  font-family: "verdana"; /* FOR MENU ITEMS */
+  font-size: 16;
+  font-style: italic;
+  color: #800000;
+}

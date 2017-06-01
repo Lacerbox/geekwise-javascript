@@ -1,0 +1,71 @@
+/* HEADER STYLES FOR ABOUT.HTML */
+
+/* HERO SECTION (upfront image, banner) */
+/* (not using because "<div align="center"><h4><h5><img src="img/luigis-logo.gif"></h5></h4>" works better */
+.hero {
+    height: 300px;
+    width: 100%;
+    background-image: url('../img/luigis-logo.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#hero-header {
+    text-align: center;
+    color: #fff;
+    font-size: 75px;
+    padding-top: 10%;
+}
+
+/* END HERO SECTION */
+
+.luigi {
+    text-align: center;
+    font-family: "nadianne";
+    font-size: 12pt; color: #335752}
+
+h4 {
+    text-align: center;
+    font-family: "verdana";
+    font-size: 11pt;
+    color: #335752
+    display: block;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+/* Gets rid of underline on 'Return Home' */
+a {
+    text-decoration: none;
+}
+
+h5 {
+    margin-top: 82px; /* for main logo height in index */
+    margin-bottom: 27px;
+    padding: 0 0 0 0px;
+}
+
+#about-paragraph {
+    padding: 0 29px;
+    text-align: justify;
+}
+
+/* For Font Family Style */
+p.sansserif {
+    font-family: verdana, helvetica, sans-serif;
+}
+
+<!--
+body {
+    font-family: arial, helvetica, sans-serif;
+    color: #335752;
+    background-repeat: repeat
+}
+    a:link    { color: #335752 }
+    a:visited { color: #335752 }
+    a:hover   { color: #8bbaba }
+    a:active  { color: #54928b }
+-->

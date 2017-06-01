@@ -1,0 +1,77 @@
+/* FOR FRED-GAME.HTML */
+
+body {
+    font-family: verdana, arial, sans-serif;
+    color: #335752;
+    background-repeat: repeat;
+}
+                            /* FOR TEXT HOVER COLOR CHANGE ON ALL LINKS IN BODY */
+a:link    { color: #335752 }
+a:visited { color: #335752 }
+a:hover   { color: #8BBABA }
+a:active  { color: #54928B }
+
+/* Gets rid of underline on links */
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 11pt;
+  font-family: "verdana";
+  color: #335752;
+}
+
+h2 {
+  font-size: 11pt;
+  font-family: "verdana";
+  color: #8b0000;
+}
+
+h3 {
+  text-align: center; /* FOR 'ROXY' */
+  margin-top: 125px;
+}
+
+h4 {
+  position: relative; /* FOR PICTURE OF FRED EATING A 'FRED' */
+  text-align: center;
+  margin-top: 70px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+h5 {
+  text-align: center; /* FOR 'HINT * Who's eating the "Fred"? * HINT' */
+  /*font-size: 11pt;
+  font-family: "verdana";
+  color: #800000;*/
+}
+
+h6 {
+  text-align: center; /* FOR 'Close Window' */
+  font-size: 11pt;
+  font-family: "verdana";
+  color: #335752;
+}
+
+/* TEXT FADE START */
+y {
+  font-weight: bold; /* without this font is sometimes bold */
+  font-family: "verdana";
+  font-size: 16px;        /* FOR 'HINT' */
+  animation: change 1s infinite;
+}
+
+z {
+  font-weight: bold; /* without this font is sometimes bold */
+  font-family: "verdana";
+  font-size: 16px;        /* FOR 'Who's eating the "Fred"?' */
+  animation: change 2s infinite;
+}
+
+@keyframes change {
+  from { color: #800000 }
+  to   { color: #ff3333 }
+}
+/* TEXT FADE END */

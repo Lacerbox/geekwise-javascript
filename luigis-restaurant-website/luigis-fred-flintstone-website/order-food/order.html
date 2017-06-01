@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="italian restaurant">
+        <meta name="keywords" content="luigis, italian, food, dinners, sandwiches">
+        <title>Order Luigi's Food</title>
+        <link rel="stylesheet" href="styles/font-awesome.min.css">
+        <link rel="stylesheet" href="styles/style.css">
+
+<script language="JavaScript">
+<!--
+// THIS OLD CODE IS VERY BUGGY AND TRIES TO CORRECT FOR EVERYTHING
+//
+//function checkName(form)
+//{
+//   if(form.Name.value == "" || form.Name.value.indexOf(' ', 0) == -1 || form.Name.value.length <= 4 )
+//   {
+//      alert("Your entry for  First & Last name is Incorrect ...\n                  Please Reenter");
+//      return true
+//   }	  
+//}
+//
+//function checkEmail(form)
+//{
+//   if(form.Email.value == "" || form.Email.value.indexOf('@', 0) == -1 || form.Email.value.length < 9)
+//   {
+//      alert("Please enter your correct E-Mail address")
+//      return true
+//   }
+//}
+//
+function submitForm()
+{
+   alert("If we really existed, we'd send you some food. Go ahead and drop us a line anyway, but be nice or you'll be getting a visit from my uncle Vito and his nephew's Tiny and Rocco! This is where you click the OK button below, or else!");
+   return true
+}
+
+-->
+</script>
+
+    </head>
+
+    <body onload="document.forms[0].Name.focus()" background="img/pizza_bk.jpg" text="#335752" link="#B73122">
+
+    <center><img src=img/luigis_logo.gif></center><br>
+    <font face="nadianne">
+    <form name=feedBack action="mailto:Luigi@LuigisRestaurant.net?subject=Hey Luigi, Send Me a Fred with some Peppers!" onsubmit="return submitForm()" METHOD="post" ENCTYPE="text/plain">
+
+    <input type="hidden">
+    <p><big><strong><font color="#b73122"><big><em><big>Order Food Here</big></em></big></font></strong></big></p>
+    <table>
+        <tr>
+            <th><em>Name</em></th>
+            <th><input type="text" size="35" maxlength="256" name="Name" onblur="checkName(this.form)" ></th>
+            <th>First & Last (required)</th> 
+        </tr>
+        <tr>
+            <th><em>Address</em></th>
+            <th><input type="text" size="35" maxlength="256" name="Address"></th>
+        </tr>
+        <tr>
+            <th><em>City</em></th>
+            <th><input type="text" size="35" maxlength="256" name="City"></th>
+        </tr>
+        <tr>
+            <th><em>Phone</em></th>
+            <th><input type="text" size="35" maxlength="256" name="Phone"></th>
+        </tr>
+        <tr>
+            <th ><em>Email</em></th>
+            <th><input type="text" size="35" maxlength="256" name="Email" onblur="checkEmail(this.form)"></th>
+            <th align=left>(required)</th>
+        </tr>
+    </table>
+    <br>
+
+    <p><strong><em>Side order or appetizer?</em></strong><br>
+    <select name="SideOrder" size="1">
+        <option value="No Sides or Appetizers"></option>
+        <option value="Garlic Bread">Garlic Bread</option>
+        <option value="Garlic Cheese Bread">Garlic Cheese Bread</option>
+        <option value="Side of Meatball">Side of Meatball</option>
+        <option value="Side of Sausage">Side of Sausage</option>
+        <option value="Salami & Cheese Plate">Salami & Cheese Plate</option>
+        <option value="Antipasto Platter">Antipasto Platter</option>
+        <option value="Italian Chef Salad">Italian Chef Salad</option>
+        <option value="Minestrone Soup">Minestrone Soup</option>
+        <option value="Side of Luigi Sauce">Side of Luigi Sauce</option>
+        <option value="Side of Luigi Peppers">Side of Luigi Peppers</option>
+    </select></p><br>
+
+    <table>
+        <tr>
+            <td><font size="5"><em>What would you like to eat?</em></font></td>
+        </tr>
+        <tr>
+            <td><textarea name="Order" rows="10" cols="45"></textarea> </td>
+        <tr>
+            <td align=middle><input type="submit" value="Place Your Order"><input type="reset" value="Reset Form"></td>
+        </tr>
+    </table>
+    </form>
+    </font>
+    <center><br><br>
+    <table border=1 background=img/pizza_background.jpg>
+        <tr><td>
+        <img src=img/luigis_sign_logo.gif></td><td width=500><center>
+        <br><font face="nadianne" face="nadianne" size=+3>Internet Coupon</font><br><br>
+    <table border=1>
+        <tr><td width=365 bgcolor=#B9DDD6>
+        One Pizza any size, any toppings for <font color=red>FREE!</font> + tax <font color=red>You save a lot!</font>
+        </td></tr><tr>
+        <td width=365 bgcolor=#B9DDD6>
+        One Original Italian Steak Sandwich for <font color=red>FREE!</font> + tax <font color=red>Were talking free Fred here!</font>
+        </td></tr><tr>
+        <td width=365 bgcolor=#B9DDD6>
+        Anything in the entire restaurant for <font color=red>FREE!</font> + tax <font color=red>(anything except the employees)</font>
+        </tr></td></table><br>
+        <font size=-1>
+        Offer valid with coupon only. Not valid with other offers, coupons or specials.<br> Expires <font color=red>4-1-2099</font> 
+        <br><br>
+        </tr></td>
+    </table>
+
+    <br><br><A HREF="order.html"><IMG SRC="img/email.gif" border=0><br><br><br>
+    <h4><a href="JavaScript:window.close()">Close Window</a></h4></center>
+    </body>
+</html>
