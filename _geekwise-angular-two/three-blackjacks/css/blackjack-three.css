@@ -1,0 +1,19 @@
+/* FOR IMPORTING FONTS */
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Lobster+Two:400,400i');
+
+body {
+  background-color: hsla(185, 95%, 60%, .2)
+}
+
+h1 {
+  color: #8f008f;
+  font-weight: bold;
+  font-family: 'Lobster Two', 'Bad Script', cursive;
+  font-size: 22px;
+}
+
+h2 {
+  font-weight: normal;
+  font-family: 'Bad Script', 'Lobster Two', cursive;
+  font-size: 18px;
+}
