@@ -1,0 +1,124 @@
+html {
+  font-size: 10px; /* FOR ALL KEYS SIZE */
+  background: url(../img/b9r5sEL.jpg) bottom center;
+  background-size: cover;
+}
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+.keys-upper {    /* FOR CENTERING KEYS WITH PICTURE */
+  display: flex; /* The flex property specifies the length of the item, */
+  flex: 1;       /*  relative to the rest of the flexible items inside the same container */
+  min-height: 34vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key-upper {
+  border: .4rem solid black;    /* FOR THICKNESS AND COLOR OF KEY BORDER */
+  border-radius: .5rem;         /* FOR ROUNDNESS OF CORNERS OF KEYS */
+  margin: 1rem;                 /* FOR SPACE BETWEEN KEYS (Affects Horizontal Size Of Middle Keys) */
+  font-size: 1.5rem;            /* FOR VERTICAL SIZE OF KEYS */
+  padding: 1rem .5rem;          /* FOR VERTICAL AND HORIZONTAL SIZE OF KEYS */
+  transition: all .07s ease;    /* TRANSITION TIME FOR KEY SIZE CHANGE (what is 'ease' for?) */
+  width: 10rem;                 /* FOR WIDTH OF KEYS */
+  text-align: center;           /* TO CENTER LETTERS AND WORDS IN KEYS */
+  color: white;                 /* FOR LETTER COLOR IN KEY */
+  background: rgba(0,0,0,0.4);  /* FOR OPACITY OF INSIDE OF KEY */
+  text-shadow: 0 0 .5rem black; /* FOR TEXT SHADOW */
+}
+
+.playing-upper {
+  transform: scale(1.1);        /* FOR THE SIZE THE KEY IS TRANSFORMED TO */
+  border-color: crimson;        /* FOR THE YELLOW BORDER COLOR AROUND THE BUTTON */
+  box-shadow: 0 0 1rem crimson; /* FOR THE YELLOW GLOW AROUND THE BUTTON */
+}
+
+
+.keys-middle {
+  display: flex;
+  flex: 1;
+  min-height: 33vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key-middle {
+  border: .4rem solid black;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease; /* TRANSITION TIME FOR KEY SIZE CHANGE (what is 'ease' for?) */
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  text-shadow: 0 0 .5rem black;
+}
+
+.playing-middle {
+  transform: scale(1.1);        /* FOR THE SIZE THE KEY IS TRANSFORMED TO */
+  border-color: #ffc600;        /* FOR THE YELLOW BORDER COLOR AROUND THE BUTTON */
+  box-shadow: 0 0 1rem #ffc600; /* FOR THE YELLOW GLOW AROUND THE BUTTON */
+}
+
+
+.keys-lower {
+  display: flex;
+  flex: 1;
+  min-height: 33vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key-lower {
+  border: .4rem solid black;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease; /* TRANSITION TIME FOR KEY SIZE CHANGE (what is 'ease' for?) */
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  text-shadow: 0 0 .5rem black;
+}
+
+.playing-lower {
+  transform: scale(1.1);         /* FOR THE SIZE THE KEY IS TRANSFORMED TO */
+  border-color: darkturquoise;        /* FOR THE YELLOW BORDER COLOR AROUND THE BUTTON */
+  box-shadow: 0 0 1rem darkturquoise; /* FOR THE YELLOW GLOW AROUND THE BUTTON */
+}
+
+
+kbd {              /* Displays an element as a block element */
+  display: block;  /* THUS KEEPING THE KEY LETTER OVER THE KEY WORD */
+  font-size: 4rem; /* FOR KEY LETTER SIZE */
+}
+
+.sound-upper {               /* FOR WORDS IN KEYS */
+  font-size: 1.2rem;         /* FOR FONT SIZE */
+  text-transform: uppercase; /* TRANSFORMS WORDS TO UPPERCASE */
+  letter-spacing: .1rem;     /* FOR SPACING BETWEEN LETTERS */
+  color: #ea1f48;            /* FOR WORD COLOR */
+}
+
+.sound-middle {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #ffc600;
+}
+
+.sound-lower {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #00ced1;
+}

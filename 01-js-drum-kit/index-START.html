@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="css/style-ORIGINAL.css">
+</head>
+<body>
+
+
+  <div class="keys">
+    <div data-key="65" class="key">
+      <kbd>A</kbd>
+      <span class="sound">clap</span>
+    </div>
+    <div data-key="83" class="key">
+      <kbd>S</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    <div data-key="68" class="key">
+      <kbd>D</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div data-key="70" class="key">
+      <kbd>F</kbd>
+      <span class="sound">openhat</span>
+    </div>
+    <div data-key="71" class="key">
+      <kbd>G</kbd>
+      <span class="sound">boom</span>
+    </div>
+    <div data-key="72" class="key">
+      <kbd>H</kbd>
+      <span class="sound">ride</span>
+    </div>
+    <div data-key="74" class="key">
+      <kbd>J</kbd>
+      <span class="sound">snare</span>
+    </div>
+    <div data-key="75" class="key">
+      <kbd>K</kbd>
+      <span class="sound">tom</span>
+    </div>
+    <div data-key="76" class="key">
+      <kbd>L</kbd>
+      <span class="sound">tink</span>
+    </div>
+  </div>
+
+  <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="83" src="sounds/hihat.wav"></audio>
+  <audio data-key="68" src="sounds/kick.wav"></audio>
+  <audio data-key="70" src="sounds/openhat.wav"></audio>
+  <audio data-key="71" src="sounds/boom.wav"></audio>
+  <audio data-key="72" src="sounds/ride.wav"></audio>
+  <audio data-key="74" src="sounds/snare.wav"></audio>
+  <audio data-key="75" src="sounds/tom.wav"></audio>
+  <audio data-key="76" src="sounds/tink.wav"></audio>
+
+<script>
+
+  function playSound(e) {
+    console.log(e.keyCode);
+    // IS THERE AN AUDIO ELEMENT ON THE PAGE THAT HAS A 'data-key' OF THE KEY PRESSED
+    // TO CHECK THIS, A DATA ATTRIBUTE SELECTOR IS USED ( BACKTICKS `` AND ES6 TEMPLATE STRINGS ${} )
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); // FOR THE KEY SOUND
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);    // FOR THE KEY ANIMATION
+    console.log(audio); // IF ANY KEY OTHER THAN 'A, S, D, F, G, H, J, K, L' IS PRESSED YOU GET 'null', SO...
+    if (!audio) return; // WE ADD AN IF, SO IF NO THERE IS NO AUDIO ELEMENT, THE FUNCTION IS STOPPED FROM
+                        // RUNNING ALL TOGETHER, BUT IF THERE IS AN AUDIO ELEMENT, THEN IT IS PLAYED
+    audio.currentTime = 0; // With 'audio.play()' the sound file has to finish before it can be played again
+    audio.play();          // Using 'audio.currentTime = 0' rewinds the sound file to the beginning so it can
+    console.log(key);      // be played again before finishing (so the key can be hit in succession over and over again)
+    key.classList.add('playing'); // USES OR ADDS THE CLASS 'playing' IN STYLE.CSS TO CHANGE THE KEY LOOKS
+  }
+
+  function removeTransition(e) { // REVERTS THE KEY BACK TO ITS ORIGINAL STATE
+    //console.log(e); // THIS GETS SIX TRANSITION END EVENTS SO...
+    if (e.propertyName !== 'transform') return; // SKIP THE FUNCTION IF THE EVENT.'propertyName' DOES NOT EQUAL
+    console.log(e.propertyName);                // 'transform', IF IT IS A TRANSFORM, REMOVE OR REVERSE THE CLASS
+    this.classList.remove('playing');           // 'playing' IN STYLE.CSS TO CHANGE THE KEY BACK TO ITS ORIGINAL STATE
+  } // 'this' IS EQUAL TO 'key'
+
+  const keys = document.querySelectorAll('.key');
+  // LISTEN ON EACH KEY FOR WHEN THE TRANSITION END EVENT HAPPENS, WHEN IT DOES CALL THE FUNCTION 'removeTransition'
+  // EACH KEY GETS AN 'EventListener' ADDED TO IT WHICH IS 'transitionend', SO FOR EACH KEY LISTEN FOR 'transitionend'
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition)); // AND THEN CALL THE FUNCTION
+  window.addEventListener('keydown', playSound); // LISTEN ON 'window' FOR THE 'keydown' EVENT, AND WHEN THAT
+                                                 // HAPPENS, CALL THE FUNCTION 'playSound' TO PLAY THE SOUND FILE
+</script>
+
+
+</body>
+</html>
